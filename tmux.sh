@@ -1,7 +1,5 @@
 #!/bin/zsh
-# Tanky Woo <me@tankywoo.com>
 
-# 
 SESSION_NAME='dev'
 WINDOWS_NAME1='ripple'
 WINDOWS_NAME2='run'
