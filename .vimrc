@@ -34,16 +34,6 @@ if has('mouse') "鼠标支持
     set mouse=a
 endif
 
-"=======分割视图======"
-nmap <C-c> :sp<CR>
-nmap <C-v> :vsp<CR>
-
-"=======resize视图======="
-nmap h= :resize +5<CR>
-nmap h- :resize -5<CR>
-nmap v= :vertical resize +5<CR>
-nmap v- :vertical resize -5<CR>
-
 "=======代码折叠======"
 set foldmethod=syntax  "set foldmethod=indent 基于缩进或语法进行代码折叠
 set nofoldenable " 启动 vim 时关闭折叠代码
@@ -63,18 +53,29 @@ set hls
 "=============================================================================="
 "                                        Keymap                                "
 "=============================================================================="
-let mapleader=','
+"====begin(通用 Keymap)===="
+let mapleader=','  
 let g:mapleader=','
-inoremap jj <esc>
-inoremap kk <esc>
-" ^行首, $行尾部
-map 0 ^ 
-" 依次遍历window
-nnoremap nw <C-W><C-W>
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+inoremap jj <esc> "esc
+inoremap kk <esc> "esc
+
+nnoremap nw <C-W><C-W> "切换window
+map <C-j> <C-W>j "切到下方window
+map <C-k> <C-W>k "切到上方window
+map <C-h> <C-W>h "切到左边window
+map <C-l> <C-W>l "切到右边window
+
+
+"=======分割视图======"
+nmap <C-c> :sp<CR>  "水平分割window
+nmap <C-v> :vsp<CR> "垂直分割window
+
+"=======resize视图======="
+nmap h= :resize +5<CR>  "水平方向放大window
+nmap h- :resize -5<CR>  "水平方向缩小window
+nmap v= :vertical resize +5<CR> "垂直方向放大window
+nmap v- :vertical resize -5<CR> "垂直方向缩小window
+"====end(通用 Keymap)===="
 
 "=============================================================================="
 "                                   PluginList                                 "
@@ -160,12 +161,14 @@ let g:molokai_original=1
 "------------------------------------------------------------------------------
 " NERDTree
 "------------------------------------------------------------------------------
+"====begin(NERDTree Keymap)===="
 "autocmd StdinReadPre * let s:std_in=1
 "autocmd VimEnter * if argc()==0 && !exists("s:std_in") | NERDTree | endif
 nmap <leader>e :NERDTreeToggle<CR> 
 let g:NERDTreeDirArrows=1
 let g:NERDTreeDirArrowExpandable='▸'
 let g:NERDTreeDirArrowCollapsible='▾'
+"====end(NERDTree Keymap)===="
 
 "------------------------------------------------------------------------------
 " NERDTree-git-plugin
@@ -186,6 +189,7 @@ let g:NERDTreeIndicatorMapCustom = {
 "------------------------------------------------------------------------------
 " incsearch
 "------------------------------------------------------------------------------
+"====begin(incsearch Keymap)===="
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
@@ -198,10 +202,12 @@ map *  <Plug>(incsearch-nohl-*)
 map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
+"====end(incsearch Keymap)===="
 
 "------------------------------------------------------------------------------
 " easymotion
 "------------------------------------------------------------------------------
+"====begin(easymotion Keymap)===="
 " You can use other keymappings like <C-l> instead of <CR> if you want to
 " " use these mappings as default search and somtimes want to move cursor with
 " " EasyMotion.
@@ -232,6 +238,8 @@ map <Leader>h <Plug>(easymotion-linebackward)
 let g:EasyMotion_startofline = 0 " keep cursor column when JK motion"
 
 let g:EasyMotion_smartcase = 1
+"====end(easymotion Keymap)===="
+
 
 "------------------------------------------------------------------------------
 " Syntastic
@@ -251,12 +259,14 @@ let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
 "------------------------------------------------------------------------------
 " Tagbar
 "------------------------------------------------------------------------------
+"====begin(Tagbar Keymap)===="
 map <leader>t :TagbarToggle<CR> 
 "===========Better Rainbow Parentheses======="
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+"====end(Tagbar Keymap)===="
 
 "------------------------------------------------------------------------------
 " ultisnips
@@ -319,19 +329,23 @@ let g:rbpt_colorpairs = [
 "------------------------------------------------------------------------------
 " BufExplorer
 "------------------------------------------------------------------------------
+"====begin(BufExplorer Keymap)===="
 " Shortcuts, type <leader>l to quickly navigate to necessary buffer
 map <leader>bl :BufExplorer<cr>
 imap <leader>bl <esc>:BufExplorer<cr>
 vmap <leader>bl <esc>:BufExplorer<cr>
+"====end(BufExplorer Keymap)===="
 
 "------------------------------------------------------------------------------
 " Fugitive
 "------------------------------------------------------------------------------
+"====begin(Fugitive Keymap)===="
 map ]] ]c
 map [[ [c
 map <leader>gdi :Gdiff<cr>
 map <leader>gst :Gstatus<cr>
 map <leader>dup :diffupdate<cr>
+"====end(Fugitive Keymap)===="
 
 "------------------------------------------------------------------------------
 " Syntastic
@@ -349,6 +363,7 @@ let g:syntastic_check_on_wq = 0
 "------------------------------------------------------------------------------
 " NeoComplete
 "------------------------------------------------------------------------------
+"====begin(NeoComplete Keymap)===="
 
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 1
@@ -402,11 +417,12 @@ endif
 let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-
+"====end(NeoComplete Keymap)===="
 
 "------------------------------------------------------------------------------
 " Vim-go
 "------------------------------------------------------------------------------
+"====begin(Vim-go Keymap)===="
 let g:go_fmt_fail_silently = 1
 
 " Show a list of interfaces which is implemented by the type under your cursor
@@ -427,6 +443,7 @@ au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 "au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
+"====end(Vim-go Keymap)===="
 
 "------------------------------------------------------------------------------
 " Markdown
@@ -469,6 +486,7 @@ let g:phpcomplete_add_function_extensions = ['mongo']
 "------------------------------------------------------------------------------
 " Tabline
 "------------------------------------------------------------------------------
+"====begin(Tabline Keymap)===="
 hi TabLine      term=reverse cterm=NONE  ctermfg=144  ctermbg=236  guibg=#232526     
 hi TabLineFill  term=reverse cterm=NONE  ctermfg=144  ctermbg=236  guibg=#232526    
 hi TabLineSel   term=reverse cterm=bold  ctermfg=238  ctermbg=208  gui=bold guifg=#455354 guibg=#DC6F23
@@ -481,6 +499,7 @@ nmap <Leader>6 6gt
 nmap <Leader>7 7gt
 nmap <Leader>8 8gt
 nmap <Leader>9 9gt
+"====end(Tabline Keymap)===="
 
 "------------------------------------------------------------------------------
 " vim-css-color
