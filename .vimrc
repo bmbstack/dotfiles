@@ -143,6 +143,7 @@ Plugin 'mhinz/vim-startify'
 Plugin 'hoaproject/Contributions-Vim-Pp'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'skammer/vim-css-color'
+Plugin 'wakatime/vim-wakatime'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
