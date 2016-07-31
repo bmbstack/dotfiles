@@ -27,7 +27,7 @@ create_symlinks() {
 	dotfiles=(".zshrc" ".tmux.conf" ".vimrc" ".gitconfig")
 	for dotfile in "${dotfiles[@]}"
 	do
-		ln -sf ${PWD}/${dotfile} ${HOME}/${dotfile}
+		ln -sf ${HOME}/${dotfile}
 		echo "Create symlink ${HOME}/${dotfile}"
 	done
 }
