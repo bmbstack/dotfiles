@@ -589,3 +589,7 @@ set softtabstop=4 " 让 vim 把连续数量的空格视为一个制表符
 autocmd FileType html set shiftwidth=4|set expandtab
 "autoload _vimrc(自动加载vimrc配置)
 autocmd! bufwritepost [_.]vimrc source %
+
+if exists('$TMUX')
+    set term=screen-256color
+endif
