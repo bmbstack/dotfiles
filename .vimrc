@@ -56,25 +56,38 @@ set hls
 "====begin(通用 Keymap)===="
 let mapleader=','  
 let g:mapleader=','
-inoremap jj <esc> "esc
-inoremap kk <esc> "esc
+inoremap jj <esc> 
+" ESC
+inoremap kk <esc> 
+" ESC
 
-nnoremap nw <C-W><C-W> "切换window
-map <C-j> <C-W>j "切到下方window
-map <C-k> <C-W>k "切到上方window
-map <C-h> <C-W>h "切到左边window
-map <C-l> <C-W>l "切到右边window
+nnoremap nw <C-W><C-W> 
+" 切换window
+map <C-j> <C-W>j 
+" 切到下方window
+map <C-k> <C-W>k 
+" 切到上方window
+map <C-h> <C-W>h 
+" 切到左边window
+map <C-l> <C-W>l 
+" 切到右边window
 
 
 "=======分割视图======"
-nmap <C-c> :sp<CR>  "水平分割window
-nmap <C-v> :vsp<CR> "垂直分割window
+nmap <C-c> :sp<CR>  
+" 水平分割window
+nmap <C-v> :vsp<CR> 
+" 垂直分割window
 
 "=======resize视图======="
-nmap h= :resize +5<CR>  "水平方向放大window
-nmap h- :resize -5<CR>  "水平方向缩小window
-nmap v= :vertical resize +5<CR> "垂直方向放大window
-nmap v- :vertical resize -5<CR> "垂直方向缩小window
+nmap h= :resize +5<CR>  
+" 水平方向放大window
+nmap h- :resize -5<CR>  
+" 水平方向缩小window
+nmap v= :vertical resize +5<CR> 
+" 垂直方向放大window
+nmap v- :vertical resize -5<CR> 
+" 垂直方向缩小window
 "====end(通用 Keymap)===="
 
 "=============================================================================="
@@ -192,17 +205,26 @@ let g:NERDTreeIndicatorMapCustom = {
 "------------------------------------------------------------------------------
 "====begin(incsearch Keymap)===="
 map /  <Plug>(incsearch-forward)
+" 开始向后查找
 map ?  <Plug>(incsearch-backward)
+" 开始向后查找
 map g/ <Plug>(incsearch-stay)
+" 未知
 
 set hlsearch
 let g:incsearch#auto_nohlsearch = 1
 map n  <Plug>(incsearch-nohl-n)
+" 下一个匹配项
 map N  <Plug>(incsearch-nohl-N)
+" 上一个匹配项
 map *  <Plug>(incsearch-nohl-*)
+" 未知
 map #  <Plug>(incsearch-nohl-#)
+" 未知
 map g* <Plug>(incsearch-nohl-g*)
+" 未知
 map g# <Plug>(incsearch-nohl-g#)
+" 未知
 "====end(incsearch Keymap)===="
 
 "------------------------------------------------------------------------------
@@ -223,13 +245,20 @@ function! s:incsearch_config(...) abort
 endfunction
 
 noremap <silent><expr> /  incsearch#go(<SID>incsearch_config())
+" 未知
 noremap <silent><expr> ?  incsearch#go(<SID>incsearch_config({'command': '?'}))
+" 未知
 noremap <silent><expr> g/ incsearch#go(<SID>incsearch_config({'is_stay': 1}))
+" 未知
 
 map  / <Plug>(easymotion-sn)
+" 未知
 omap / <Plug>(easymotion-tn)
+" 未知
 map  n <Plug>(easymotion-next)
+" 未知
 map  N <Plug>(easymotion-prev)
+" 未知
 
 map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>j <Plug>(easymotion-j)
@@ -262,6 +291,7 @@ let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
 "------------------------------------------------------------------------------
 "====begin(Tagbar Keymap)===="
 map <leader>t :TagbarToggle<CR> 
+" 打开tagbar
 "===========Better Rainbow Parentheses======="
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
@@ -333,8 +363,11 @@ let g:rbpt_colorpairs = [
 "====begin(BufExplorer Keymap)===="
 " Shortcuts, type <leader>l to quickly navigate to necessary buffer
 map <leader>bl :BufExplorer<cr>
+" 打开buffer list
 imap <leader>bl <esc>:BufExplorer<cr>
+" 开打buffer list
 vmap <leader>bl <esc>:BufExplorer<cr>
+" 开打buffer list
 "====end(BufExplorer Keymap)===="
 
 "------------------------------------------------------------------------------
@@ -342,10 +375,15 @@ vmap <leader>bl <esc>:BufExplorer<cr>
 "------------------------------------------------------------------------------
 "====begin(Fugitive Keymap)===="
 map ]] ]c
+" 未知
 map [[ [c
+" 未知
 map <leader>gdi :Gdiff<cr>
+" 未知
 map <leader>gst :Gstatus<cr>
+" 未知
 map <leader>dup :diffupdate<cr>
+" 未知
 "====end(Fugitive Keymap)===="
 
 "------------------------------------------------------------------------------
@@ -384,21 +422,29 @@ let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 
 " Plugin key-mappings.
 inoremap <expr><C-g>     neocomplete#undo_completion()
+" 未知
 "inoremap <expr><C-l>     neocomplete#complete_common_string()
 
 " Recommended key-mappings.
 " <CR>: close popup and save indent.
 inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+" 未知
+
 function! s:my_cr_function()
     return pumvisible() ? neocomplete#close_popup() : "\<CR>"
 endfunction
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" 未知
 " <C-h>, <BS>: close popup and delete backword char.
 inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+" 未知
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+" 未知
 inoremap <expr><C-y>  neocomplete#close_popup()
+" 未知
 inoremap <expr><C-e>  neocomplete#cancel_popup()
+" 未知
 " Close popup by <Space>.
 "inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
 " Enable omni completion.
@@ -426,24 +472,29 @@ let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\
 "====begin(Vim-go Keymap)===="
 let g:go_fmt_fail_silently = 1
 
-" Show a list of interfaces which is implemented by the type under your cursor
 au FileType go nmap <Leader>s <Plug>(go-implements)
+" Show a list of interfaces which is implemented by the type under your cursor
 
-" Show type info for the word under your cursor
 au FileType go nmap <Leader>i <Plug>(go-info)
+" Show type info for the word under your cursor
 
-" Open the relevant Godoc for the word under the cursor
 au FileType go nmap <Leader>gd <Plug>(go-doc)
+" Open the relevant Godoc for the word under the cursor
+
 au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+" 未知
 
-" Open the Godoc in browser
 au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+" Open the Godoc in browser
 
-" Run/build/test/coverage
 au FileType go nmap <leader>r <Plug>(go-run)
+" Run/build/test/coverage
+
 au FileType go nmap <leader>b <Plug>(go-build)
-"au FileType go nmap <leader>t <Plug>(go-test)
+" Build
+
 au FileType go nmap <leader>c <Plug>(go-coverage)
+"au FileType go nmap <leader>t <Plug>(go-test)
 "====end(Vim-go Keymap)===="
 
 "------------------------------------------------------------------------------
@@ -492,14 +543,23 @@ hi TabLine      term=reverse cterm=NONE  ctermfg=144  ctermbg=236  guibg=#232526
 hi TabLineFill  term=reverse cterm=NONE  ctermfg=144  ctermbg=236  guibg=#232526    
 hi TabLineSel   term=reverse cterm=bold  ctermfg=238  ctermbg=208  gui=bold guifg=#455354 guibg=#DC6F23
 nmap <Leader>1 1gt
+" 跳转到第一个tab
 nmap <Leader>2 2gt
+" 跳转到第二个tab
 nmap <Leader>3 3gt
+" 跳转到第三个tab
 nmap <Leader>4 4gt
+" 跳转到第四个tab
 nmap <Leader>5 5gt
+" 跳转到第五个tab
 nmap <Leader>6 6gt
+" 跳转到第六个tab
 nmap <Leader>7 7gt
+" 跳转到第七个tab
 nmap <Leader>8 8gt
+" 跳转到第八个tab
 nmap <Leader>9 9gt
+" 跳转到第九个tab
 "====end(Tabline Keymap)===="
 
 "------------------------------------------------------------------------------
