@@ -58,8 +58,8 @@ set hls
 let mapleader=','  
 let g:mapleader=','
 
-nmap <leader>m :!open http://man.bmbstack.com/vim
-
+map <leader>m :!open http://man.bmbstack.com/vim
+"打开man手册
 inoremap jj <esc> 
 " ESC
 inoremap kk <esc> 
@@ -182,7 +182,8 @@ let g:molokai_original=1
 "====begin(NERDTree Keymap)===="
 "autocmd StdinReadPre * let s:std_in=1
 "autocmd VimEnter * if argc()==0 && !exists("s:std_in") | NERDTree | endif
-nmap <leader>e :NERDTreeToggle<CR> "打开或关闭左侧目录树
+nmap <leader>e :NERDTreeToggle<CR> 
+"打开或关闭左侧目录树
 let g:NERDTreeDirArrows=1
 let g:NERDTreeDirArrowExpandable='▸'
 let g:NERDTreeDirArrowCollapsible='▾'
