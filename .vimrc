@@ -56,8 +56,8 @@ set hls
 "====begin(通用 Keymap)===="
 let mapleader=','  
 let g:mapleader=','
-inoremap jj <esc> "esc
-inoremap kk <esc> "esc
+inoremap jj <esc>  "退出插入模式,相当于esc
+inoremap kk <esc>  "退出插入模式,相当于esc
 
 nnoremap nw <C-W><C-W> "切换window
 map <C-j> <C-W>j "切到下方window
@@ -165,7 +165,7 @@ let g:molokai_original=1
 "====begin(NERDTree Keymap)===="
 "autocmd StdinReadPre * let s:std_in=1
 "autocmd VimEnter * if argc()==0 && !exists("s:std_in") | NERDTree | endif
-nmap <leader>e :NERDTreeToggle<CR> 
+nmap <leader>e :NERDTreeToggle<CR> "打开或关闭左侧目录树
 let g:NERDTreeDirArrows=1
 let g:NERDTreeDirArrowExpandable='▸'
 let g:NERDTreeDirArrowCollapsible='▾'
@@ -226,15 +226,15 @@ noremap <silent><expr> /  incsearch#go(<SID>incsearch_config())
 noremap <silent><expr> ?  incsearch#go(<SID>incsearch_config({'command': '?'}))
 noremap <silent><expr> g/ incsearch#go(<SID>incsearch_config({'is_stay': 1}))
 
-map  / <Plug>(easymotion-sn)
-omap / <Plug>(easymotion-tn)
-map  n <Plug>(easymotion-next)
-map  N <Plug>(easymotion-prev)
+map  / <Plug>(easymotion-sn) "向后搜索
+omap / <Plug>(easymotion-tn) "向后搜索
+map  n <Plug>(easymotion-next) "搜索下一个匹配项
+map  N <Plug>(easymotion-prev) "搜索上一个匹配项
 
-map <Leader>l <Plug>(easymotion-lineforward)
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
-map <Leader>h <Plug>(easymotion-linebackward)
+map <Leader>l <Plug>(easymotion-lineforward) "列出右侧待跳转字符
+map <Leader>j <Plug>(easymotion-j) "列出下方待跳转字符
+map <Leader>k <Plug>(easymotion-k) "列出上方待跳转字符
+map <Leader>h <Plug>(easymotion-linebackward) "列出左侧待跳转字符
 
 let g:EasyMotion_startofline = 0 " keep cursor column when JK motion"
 
@@ -261,7 +261,7 @@ let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
 " Tagbar
 "------------------------------------------------------------------------------
 "====begin(Tagbar Keymap)===="
-map <leader>t :TagbarToggle<CR> 
+map <leader>t :TagbarToggle<CR>  "打开或关闭右侧Tagbar
 "===========Better Rainbow Parentheses======="
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
@@ -332,9 +332,9 @@ let g:rbpt_colorpairs = [
 "------------------------------------------------------------------------------
 "====begin(BufExplorer Keymap)===="
 " Shortcuts, type <leader>l to quickly navigate to necessary buffer
-map <leader>bl :BufExplorer<cr>
-imap <leader>bl <esc>:BufExplorer<cr>
-vmap <leader>bl <esc>:BufExplorer<cr>
+map <leader>bl :BufExplorer<cr> "列出buffer list
+imap <leader>bl <esc>:BufExplorer<cr> "列出buffer list
+vmap <leader>bl <esc>:BufExplorer<cr> "列出buffer list
 "====end(BufExplorer Keymap)===="
 
 "------------------------------------------------------------------------------
@@ -343,8 +343,8 @@ vmap <leader>bl <esc>:BufExplorer<cr>
 "====begin(Fugitive Keymap)===="
 map ]] ]c
 map [[ [c
-map <leader>gdi :Gdiff<cr>
-map <leader>gst :Gstatus<cr>
+map <leader>gdi :Gdiff<cr> "git diff
+map <leader>gst :Gstatus<cr> "git status
 map <leader>dup :diffupdate<cr>
 "====end(Fugitive Keymap)===="
 
@@ -393,7 +393,7 @@ function! s:my_cr_function()
     return pumvisible() ? neocomplete#close_popup() : "\<CR>"
 endfunction
 " <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>" "Tab补全
 " <C-h>, <BS>: close popup and delete backword char.
 inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
@@ -440,8 +440,8 @@ au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
 au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
 
 " Run/build/test/coverage
-au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>r <Plug>(go-run)  "go run
+au FileType go nmap <leader>b <Plug>(go-build) "go build
 "au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 "====end(Vim-go Keymap)===="
@@ -491,15 +491,15 @@ let g:phpcomplete_add_function_extensions = ['mongo']
 hi TabLine      term=reverse cterm=NONE  ctermfg=144  ctermbg=236  guibg=#232526     
 hi TabLineFill  term=reverse cterm=NONE  ctermfg=144  ctermbg=236  guibg=#232526    
 hi TabLineSel   term=reverse cterm=bold  ctermfg=238  ctermbg=208  gui=bold guifg=#455354 guibg=#DC6F23
-nmap <Leader>1 1gt
-nmap <Leader>2 2gt
-nmap <Leader>3 3gt
-nmap <Leader>4 4gt
-nmap <Leader>5 5gt
-nmap <Leader>6 6gt
-nmap <Leader>7 7gt
-nmap <Leader>8 8gt
-nmap <Leader>9 9gt
+nmap <Leader>1 1gt "跳转Tab1
+nmap <Leader>2 2gt "跳转Tab2
+nmap <Leader>3 3gt "跳转Tab3
+nmap <Leader>4 4gt "跳转Tab4
+nmap <Leader>5 5gt "跳转Tab4
+nmap <Leader>6 6gt "跳转Tab5
+nmap <Leader>7 7gt "跳转Tab6
+nmap <Leader>8 8gt "跳转Tab8
+nmap <Leader>9 9gt "跳转Tab9
 "====end(Tabline Keymap)===="
 
 "------------------------------------------------------------------------------
