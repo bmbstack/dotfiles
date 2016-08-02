@@ -265,14 +265,14 @@ map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
 " 查找上一个匹配项
 
-map <Leader>l <Plug>(easymotion-lineforward) 
-"列出右侧待跳转字符
-map <Leader>j <Plug>(easymotion-j) 
-"列出下方待跳转字符
-map <Leader>k <Plug>(easymotion-k) 
-"列出上方待跳转字符
-map <Leader>h <Plug>(easymotion-linebackward) 
-"列出左侧待跳转字符
+map <Leader>l <Plug>(easymotion-lineforward)
+" 列出右侧待跳转字符
+map <Leader>j <Plug>(easymotion-j)
+" 列出下侧待跳转字符
+map <Leader>k <Plug>(easymotion-k)
+" 列出上侧待跳转字符
+map <Leader>h <Plug>(easymotion-linebackward)
+" 列出左侧待跳转字符
 
 let g:EasyMotion_startofline = 0 " keep cursor column when JK motion"
 
