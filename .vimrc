@@ -357,7 +357,6 @@ let g:rbpt_colorpairs = [
             \ ['brown',       'firebrick3'],
             \ ['gray',        'RoyalBlue3'],
             \ ['darkred',     'DarkOrchid3'],
-            \ ['black',       'SeaGreen3'],
             \ ['darkmagenta', 'DarkOrchid3'],
             \ ['Darkblue',    'firebrick3'],
             \ ['darkgreen',   'RoyalBlue3'],
@@ -503,7 +502,6 @@ au FileType go nmap <leader>b <Plug>(go-build)
 "au FileType go nmap <leader>t <Plug>(go-test)
 "go test
 au FileType go nmap <leader>c <Plug>(go-coverage)
-"未知
 "====end(Vim-go Keymap)===="
 
 "------------------------------------------------------------------------------
