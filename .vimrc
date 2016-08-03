@@ -59,6 +59,7 @@ let mapleader=','
 let g:mapleader=','
 
 map <leader>m :!open http://man.bmbstack.com/vim
+map <leader>w :!open https://wakatime.com/dashboard
 "打开man手册
 inoremap jj <esc> 
 " ESC
