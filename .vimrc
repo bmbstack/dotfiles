@@ -161,6 +161,7 @@ Plugin 'mhinz/vim-startify'
 Plugin 'hoaproject/Contributions-Vim-Pp'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'skammer/vim-css-color'
+Plugin 'artur-shaik/vim-javacomplete2' " Java 自动完成
 Plugin 'wakatime/vim-wakatime'
 
 " All of your Plugins must be added before the following line
@@ -585,6 +586,40 @@ let g:jsx_ext_required = 0
 " forof<tab> for (let value of arr) { ... }
 " im<tab> import lib from 'Library'
 " ex<tab> export default foo
+
+"------------------------------------------------------------------------------
+" Java complete2
+"------------------------------------------------------------------------------
+nmap <leader>qI <Plug>(JavaComplete-Imports-AddMissing)
+nmap <leader>qR <Plug>(JavaComplete-Imports-RemoveUnused)
+nmap <leader>qi <Plug>(JavaComplete-Imports-AddSmart)
+nmap <leader>qii <Plug>(JavaComplete-Imports-Add)
+
+imap <C-q>I <Plug>(JavaComplete-Imports-AddMissing)
+imap <C-q>R <Plug>(JavaComplete-Imports-RemoveUnused)
+imap <C-q>i <Plug>(JavaComplete-Imports-AddSmart)
+imap <C-q>ii <Plug>(JavaComplete-Imports-Add)
+
+nmap <leader>qM <Plug>(JavaComplete-Generate-AbstractMethods)
+
+imap <C-q>qM <Plug>(JavaComplete-Generate-AbstractMethods)
+
+nmap <leader>qA <Plug>(JavaComplete-Generate-Accessors)
+nmap <leader>qs <Plug>(JavaComplete-Generate-AccessorSetter)
+nmap <leader>qg <Plug>(JavaComplete-Generate-AccessorGetter)
+nmap <leader>qa <Plug>(JavaComplete-Generate-AccessorSetterGetter)
+nmap <leader>qts <Plug>(JavaComplete-Generate-ToString)
+nmap <leader>qeq <Plug>(JavaComplete-Generate-EqualsAndHashCode)
+nmap <leader>qc <Plug>(JavaComplete-Generate-Constructor)
+nmap <leader>qcc <Plug>(JavaComplete-Generate-DefaultConstructor)
+
+imap <C-q>s <Plug>(JavaComplete-Generate-AccessorSetter)
+imap <C-q>g <Plug>(JavaComplete-Generate-AccessorGetter)
+imap <C-q>a <Plug>(JavaComplete-Generate-AccessorSetterGetter)
+
+vmap <leader>qs <Plug>(JavaComplete-Generate-AccessorSetter)
+vmap <leader>qg <Plug>(JavaComplete-Generate-AccessorGetter)
+vmap <leader>qa <Plug>(JavaComplete-Generate-AccessorSetterGetter)
 
 "======代码缩进======="
 filetype indent on " 自适应不同语言的智能缩进
