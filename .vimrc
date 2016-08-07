@@ -388,11 +388,13 @@ map ]] ]c
 " 未知
 map [[ [c
 " 未知
-map <leader>gdi :Gdiff<cr>
+nmap <leader>gdi :Gdiff<cr>
 " git diff
-map <leader>gst :Gstatus<cr>
+nmap <leader>gst :Gstatus<cr>
+" git commit
+nmap <leader>gct :Gcommit<cr>
 " git status
-map <leader>dup :diffupdate<cr>
+nmap <leader>dup :diffupdate<cr>
 " 未知
 "====end(Fugitive Keymap)===="
 
