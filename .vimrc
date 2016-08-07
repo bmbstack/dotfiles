@@ -391,8 +391,14 @@ map [[ [c
 nmap <leader>gdi :Gdiff<cr>
 " git diff
 nmap <leader>gst :Gstatus<cr>
-" git commit
+" git status
 nmap <leader>gct :Gcommit<cr>
+" git commit
+nmap <leader>gph :Gpush<CR>
+" git push
+nmap <leader>git :Gpull<CR>
+" git pull
+
 " git status
 nmap <leader>dup :diffupdate<cr>
 " 未知
