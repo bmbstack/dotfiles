@@ -387,19 +387,17 @@ vmap <leader>bl <esc>:BufExplorer<cr>
 map ]] ]c
 " 未知
 map [[ [c
-" 未知
+" 未
 nmap <leader>gdi :Gdiff<cr>
 " git diff
 nmap <leader>gst :Gstatus<cr>
 " git status
 nmap <leader>gct :Gcommit<cr>
 " git commit
-nmap <leader>gph :Gpush<CR>
+nmap <leader>gph :Gpush
 " git push
-nmap <leader>git :Gpull<CR>
+nmap <leader>gpl :Gpull
 " git pull
-
-" git status
 nmap <leader>dup :diffupdate<cr>
 " 未知
 "====end(Fugitive Keymap)===="
