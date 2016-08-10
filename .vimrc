@@ -201,7 +201,7 @@ let g:NERDTreeIndicatorMapCustom = {
             \ "Renamed"   : "➜",
             \ "Unmerged"  : "═",
             \ "Deleted"   : "✖",
-            \ "Dirty"     : "✗",
+            \ "Dirty"     : "✨",
             \ "Clean"     : "✔︎",
             \ "Unknown"   : "?"
             \ }
@@ -290,6 +290,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_aggregate_errors = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
@@ -401,18 +402,6 @@ nmap <leader>dup :diffupdate<cr>
 " 未知
 "====end(Fugitive Keymap)===="
 
-"------------------------------------------------------------------------------
-" Syntastic
-"------------------------------------------------------------------------------
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_always_populate_loc_list = 0
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 
 "------------------------------------------------------------------------------
 " NeoComplete
@@ -595,6 +584,8 @@ let g:jsx_ext_required = 0
 "------------------------------------------------------------------------------
 " Java complete2
 "------------------------------------------------------------------------------
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
 nmap <leader>qI <Plug>(JavaComplete-Imports-AddMissing)
 nmap <leader>qR <Plug>(JavaComplete-Imports-RemoveUnused)
 nmap <leader>qi <Plug>(JavaComplete-Imports-AddSmart)
