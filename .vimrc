@@ -160,7 +160,7 @@ Plugin 'Konfekt/FastFold'
 Plugin 'mhinz/vim-startify'
 Plugin 'hoaproject/Contributions-Vim-Pp'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'skammer/vim-css-color'
+" Plugin 'skammer/vim-css-color' " 严重影响html, less的打开速度
 Plugin 'artur-shaik/vim-javacomplete2' " Java 自动完成
 Plugin 'wakatime/vim-wakatime'
 
@@ -584,7 +584,10 @@ let g:jsx_ext_required = 0
 "------------------------------------------------------------------------------
 " Java complete2
 "------------------------------------------------------------------------------
-autocmd FileType java setlocal omnifunc=javacomplete#Complete
+autocmd FileType java setlocal omnifunc=javacomplete#Complete " 严重影响java文件打开速度
+
+" 设置classpath, javacomplete插件需要
+let g:syntastic_java_javac_classpath='./bin/:/usr/local/java/lib/tools.jar:/usr/local/java/lib/dt.jar:/usr/local/java/lib/'
 
 nmap <leader>qI <Plug>(JavaComplete-Imports-AddMissing)
 nmap <leader>qR <Plug>(JavaComplete-Imports-RemoveUnused)
