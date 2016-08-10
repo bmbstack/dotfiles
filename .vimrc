@@ -350,7 +350,6 @@ highlight link Flake8_PyFlake    WarningMsg
 "------------------------------------------------------------------------------
 let g:rbpt_colorpairs = [
             \ ['brown',       'RoyalBlue3'],
-            \ ['Darkblue',    'SeaGreen3'],
             \ ['darkgray',    'DarkOrchid3'],
             \ ['darkgreen',   'firebrick3'],
             \ ['darkcyan',    'RoyalBlue3'],
