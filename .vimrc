@@ -201,7 +201,7 @@ let g:NERDTreeIndicatorMapCustom = {
             \ "Renamed"   : "➜",
             \ "Unmerged"  : "═",
             \ "Deleted"   : "✖",
-            \ "Dirty"     : "✨",
+            \ "Dirty"     : "☭",
             \ "Clean"     : "✔︎",
             \ "Unknown"   : "?"
             \ }
