@@ -24,7 +24,7 @@ check_software_exist() {
 }
 
 create_symlinks() {
-	dotfiles=(".zshrc" ".tmux.conf" ".vimrc" ".gitconfig")
+	dotfiles=(".zshrc" ".tmux.conf" ".vimrc" ".gitconfig" ".ctags")
 	for dotfile in "${dotfiles[@]}"
 	do
 		ln -sf ${HOME}/${dotfile}

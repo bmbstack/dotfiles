@@ -122,6 +122,7 @@ Plugin 'majutsushi/tagbar' "显示tagbar目录
 Plugin 'pangloss/vim-javascript' "js缩进语法支持
 Plugin 'mxw/vim-jsx' " jsx 语法高亮
 Plugin 'isRuslan/vim-es6' " ECMAScript 6语法高亮
+Plugin 'mtscout6/vim-tagbar-css'
 Plugin 'ervandew/supertab' "插入模式下Tab补全
 Plugin 'tpope/vim-repeat' "repeating
 Plugin 'godlygeek/tabular' "文本Tab补齐
