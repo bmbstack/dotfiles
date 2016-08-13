@@ -590,6 +590,7 @@ autocmd FileType java setlocal omnifunc=javacomplete#Complete " 严重影响java
 " 设置classpath, javacomplete插件需要
 let g:syntastic_java_javac_classpath='./bin/:/usr/local/java/lib/tools.jar:/usr/local/java/lib/dt.jar:/usr/local/java/lib/'
 
+"====begin(Java Keymap)===="
 nmap <leader>qI <Plug>(JavaComplete-Imports-AddMissing)
 nmap <leader>qR <Plug>(JavaComplete-Imports-RemoveUnused)
 nmap <leader>qi <Plug>(JavaComplete-Imports-AddSmart)
@@ -623,6 +624,7 @@ vmap <leader>qa <Plug>(JavaComplete-Generate-AccessorSetterGetter)
 
 nmap <C-b> :!make<CR>:!make run<CR>
 " 编译并运行Java程序
+"====end(Java Keymap)===="
 
 "======代码缩进======="
 filetype indent on " 自适应不同语言的智能缩进
