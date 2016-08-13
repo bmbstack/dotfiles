@@ -593,36 +593,53 @@ let g:syntastic_java_javac_classpath='./bin/:/usr/local/java/lib/tools.jar:/usr/
 "====begin(Java Keymap)===="
 
 nmap <leader>qI <Plug>(JavaComplete-Imports-AddMissing)
+" 添加缺少的包
 nmap <leader>qR <Plug>(JavaComplete-Imports-RemoveUnused)
+" 移除未用到的包
 nmap <leader>qi <Plug>(JavaComplete-Imports-AddSmart)
+" 未知
 nmap <leader>qii <Plug>(JavaComplete-Imports-Add)
-
+" 未知
 imap <C-q>I <Plug>(JavaComplete-Imports-AddMissing)
+" 添加缺少的包
 imap <C-q>R <Plug>(JavaComplete-Imports-RemoveUnused)
+" 移除未用到的包
 imap <C-q>i <Plug>(JavaComplete-Imports-AddSmart)
+" 未知
 imap <C-q>ii <Plug>(JavaComplete-Imports-Add)
-
+" 未知
 nmap <leader>qM <Plug>(JavaComplete-Generate-AbstractMethods)
-
+" 实现基类的抽象方法
 imap <C-q>qM <Plug>(JavaComplete-Generate-AbstractMethods)
-
+" 实现基类的抽象方法
 nmap <leader>qA <Plug>(JavaComplete-Generate-Accessors)
+" 生成访问器代码
 nmap <leader>qs <Plug>(JavaComplete-Generate-AccessorSetter)
+" 生成写访问器代码
 nmap <leader>qg <Plug>(JavaComplete-Generate-AccessorGetter)
+" 生成读访问器代码
 nmap <leader>qa <Plug>(JavaComplete-Generate-AccessorSetterGetter)
+" 生成读写访问器代码
 nmap <leader>qts <Plug>(JavaComplete-Generate-ToString)
+" 生成toString()方法代码
 nmap <leader>qeq <Plug>(JavaComplete-Generate-EqualsAndHashCode)
+" 生成Equals()和HashCode()方法代码
 nmap <leader>qc <Plug>(JavaComplete-Generate-Constructor)
+" 生成构造函数代码
 nmap <leader>qcc <Plug>(JavaComplete-Generate-DefaultConstructor)
-
+" 生成默认构造函数代码
 imap <C-q>s <Plug>(JavaComplete-Generate-AccessorSetter)
+" 生成写访问器代码
 imap <C-q>g <Plug>(JavaComplete-Generate-AccessorGetter)
+" 生成读访问器代码
 imap <C-q>a <Plug>(JavaComplete-Generate-AccessorSetterGetter)
-
+" 生成读写访问器代码
 vmap <leader>qs <Plug>(JavaComplete-Generate-AccessorSetter)
+" 生成写访问器代码
 vmap <leader>qg <Plug>(JavaComplete-Generate-AccessorGetter)
+" 生成读访问器代码
 vmap <leader>qa <Plug>(JavaComplete-Generate-AccessorSetterGetter)
-
+" 生成读写访问器代码
 nmap <C-b> :!make<CR>:!make run<CR>
 " 编译并运行Java程序
 "====end(Java Keymap)===="
