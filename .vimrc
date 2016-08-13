@@ -621,6 +621,9 @@ vmap <leader>qs <Plug>(JavaComplete-Generate-AccessorSetter)
 vmap <leader>qg <Plug>(JavaComplete-Generate-AccessorGetter)
 vmap <leader>qa <Plug>(JavaComplete-Generate-AccessorSetterGetter)
 
+nmap <C-b> :!make<CR>:!make run<CR>
+" 编译并运行Java程序
+
 "======代码缩进======="
 filetype indent on " 自适应不同语言的智能缩进
 set expandtab " 将制表符扩展为空格
