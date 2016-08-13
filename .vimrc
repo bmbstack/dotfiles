@@ -591,6 +591,7 @@ autocmd FileType java setlocal omnifunc=javacomplete#Complete " 严重影响java
 let g:syntastic_java_javac_classpath='./bin/:/usr/local/java/lib/tools.jar:/usr/local/java/lib/dt.jar:/usr/local/java/lib/'
 
 "====begin(Java Keymap)===="
+
 nmap <leader>qI <Plug>(JavaComplete-Imports-AddMissing)
 nmap <leader>qR <Plug>(JavaComplete-Imports-RemoveUnused)
 nmap <leader>qi <Plug>(JavaComplete-Imports-AddSmart)
