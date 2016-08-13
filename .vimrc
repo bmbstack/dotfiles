@@ -589,56 +589,59 @@ autocmd FileType java setlocal omnifunc=javacomplete#Complete " 严重影响java
 
 " 设置classpath, javacomplete插件需要
 let g:syntastic_java_javac_classpath='./bin/:/usr/local/java/lib/tools.jar:/usr/local/java/lib/dt.jar:/usr/local/java/lib/'
+let g:JavaComplete_LibsPath='./bin/'
+let g:JavaComplete_ImportOrder = ['java.', 'javax.', 'com.', 'org.', 'net.']
+let g:JavaComplete_RegularClasses = ['java.lang.String', 'java.lang.Object', 'java.util.ArrayList']
 
 "====begin(Java Keymap)===="
 
-nmap <leader>qI <Plug>(JavaComplete-Imports-AddMissing)
+nmap <leader>xI <Plug>(JavaComplete-Imports-AddMissing)
 " 添加缺少的包
-nmap <leader>qR <Plug>(JavaComplete-Imports-RemoveUnused)
+nmap <leader>xR <Plug>(JavaComplete-Imports-RemoveUnused)
 " 移除未用到的包
-nmap <leader>qi <Plug>(JavaComplete-Imports-AddSmart)
+nmap <leader>xi <Plug>(JavaComplete-Imports-AddSmart)
 " 未知
-nmap <leader>qii <Plug>(JavaComplete-Imports-Add)
+nmap <leader>xai <Plug>(JavaComplete-Imports-Add)
 " 未知
-imap <C-q>I <Plug>(JavaComplete-Imports-AddMissing)
+imap <C-x>I <Plug>(JavaComplete-Imports-AddMissing)
 " 添加缺少的包
-imap <C-q>R <Plug>(JavaComplete-Imports-RemoveUnused)
+imap <C-x>R <Plug>(JavaComplete-Imports-RemoveUnused)
 " 移除未用到的包
-imap <C-q>i <Plug>(JavaComplete-Imports-AddSmart)
+imap <C-x>i <Plug>(JavaComplete-Imports-AddSmart)
 " 未知
-imap <C-q>ii <Plug>(JavaComplete-Imports-Add)
+imap <C-x>ai <Plug>(JavaComplete-Imports-Add)
 " 未知
-nmap <leader>qM <Plug>(JavaComplete-Generate-AbstractMethods)
+nmap <leader>xM <Plug>(JavaComplete-Generate-AbstractMethods)
 " 实现基类的抽象方法
-imap <C-q>qM <Plug>(JavaComplete-Generate-AbstractMethods)
+imap <C-x>xM <Plug>(JavaComplete-Generate-AbstractMethods)
 " 实现基类的抽象方法
-nmap <leader>qA <Plug>(JavaComplete-Generate-Accessors)
+nmap <leader>xA <Plug>(JavaComplete-Generate-Accessors)
 " 生成访问器代码
-nmap <leader>qs <Plug>(JavaComplete-Generate-AccessorSetter)
+nmap <leader>xs <Plug>(JavaComplete-Generate-AccessorSetter)
 " 生成写访问器代码
-nmap <leader>qg <Plug>(JavaComplete-Generate-AccessorGetter)
+nmap <leader>xg <Plug>(JavaComplete-Generate-AccessorGetter)
 " 生成读访问器代码
-nmap <leader>qa <Plug>(JavaComplete-Generate-AccessorSetterGetter)
+nmap <leader>xa <Plug>(JavaComplete-Generate-AccessorSetterGetter)
 " 生成读写访问器代码
-nmap <leader>qts <Plug>(JavaComplete-Generate-ToString)
+nmap <leader>xts <Plug>(JavaComplete-Generate-ToString)
 " 生成toString()方法代码
-nmap <leader>qeq <Plug>(JavaComplete-Generate-EqualsAndHashCode)
+nmap <leader>xeq <Plug>(JavaComplete-Generate-EqualsAndHashCode)
 " 生成Equals()和HashCode()方法代码
-nmap <leader>qc <Plug>(JavaComplete-Generate-Constructor)
+nmap <leader>xc <Plug>(JavaComplete-Generate-Constructor)
 " 生成构造函数代码
-nmap <leader>qcc <Plug>(JavaComplete-Generate-DefaultConstructor)
+nmap <leader>xcc <Plug>(JavaComplete-Generate-DefaultConstructor)
 " 生成默认构造函数代码
-imap <C-q>s <Plug>(JavaComplete-Generate-AccessorSetter)
+imap <C-x>s <Plug>(JavaComplete-Generate-AccessorSetter)
 " 生成写访问器代码
-imap <C-q>g <Plug>(JavaComplete-Generate-AccessorGetter)
+imap <C-x>g <Plug>(JavaComplete-Generate-AccessorGetter)
 " 生成读访问器代码
-imap <C-q>a <Plug>(JavaComplete-Generate-AccessorSetterGetter)
+imap <C-x>a <Plug>(JavaComplete-Generate-AccessorSetterGetter)
 " 生成读写访问器代码
-vmap <leader>qs <Plug>(JavaComplete-Generate-AccessorSetter)
+vmap <leader>xs <Plug>(JavaComplete-Generate-AccessorSetter)
 " 生成写访问器代码
-vmap <leader>qg <Plug>(JavaComplete-Generate-AccessorGetter)
+vmap <leader>xg <Plug>(JavaComplete-Generate-AccessorGetter)
 " 生成读访问器代码
-vmap <leader>qa <Plug>(JavaComplete-Generate-AccessorSetterGetter)
+vmap <leader>xa <Plug>(JavaComplete-Generate-AccessorSetterGetter)
 " 生成读写访问器代码
 nmap <C-b> :!make<CR>:!make run<CR>
 " 编译并运行Java程序
