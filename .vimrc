@@ -1,3 +1,4 @@
+
 "==========================================================================="
 " ProjectLink: https://github.com/bmbstack/dotfiles
 " AwesomeLink: https://github.com/yangyangwithgnu/use_vim_as_ide
@@ -506,6 +507,9 @@ au FileType go nmap <leader>b <Plug>(go-build)
 "go test
 au FileType go nmap <leader>c <Plug>(go-coverage)
 "====end(Vim-go Keymap)===="
+
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 
 "------------------------------------------------------------------------------
 " Markdown

@@ -103,7 +103,7 @@ export PATH="$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools"
 export GOROOT="/usr/local/go"
 export GOPATH="$HOME/go"
 export GO15VENDOREXPERIMENT=1
-export PATH="$PATH:$GOPATH/bin:$GOROOT/bin:/opt/nodejs/bin"
+export PATH="$PATH:$GOPATH/bin:$GOROOT/bin"
 
 # APACHE NGINX PHP MYSQL
 export PSYSH_HOME="$HOME/.composer/vendor/psy/psysh"
