@@ -84,11 +84,6 @@ nmap <C-c> :sp<CR>
 nmap <C-v> :vsp<CR> 
 " 垂直分割window
 
-imap <C-f><C-w> <ESC>wa
-" 向右移动一个词
-imap <C-b><C-w> <ESC>bi
-" 向左移动一个词
-
 "=======resize视图======="
 nmap h= :resize +5<CR>  
 " 水平方向放大window
