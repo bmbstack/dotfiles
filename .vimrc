@@ -91,6 +91,11 @@ imap <C-a> <ESC>I
 imap <C-e> <ESC>A
 " 移动到行尾
 
+imap <C-f><C-w> <ESC>wa
+" 向右移动一个词
+imap <C-b><C-w> <ESC>bi
+" 向左移动一个词
+
 "=======resize视图======="
 nmap h= :resize +5<CR>  
 " 水平方向放大window
