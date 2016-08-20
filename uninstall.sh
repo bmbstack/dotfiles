@@ -17,3 +17,5 @@ rm -rf ${HOME}/.tmux
 echo "Delete dirs ${HOME}/.tmux"
 rm -rf ${HOME}/.vim
 echo "Delete dirs ${HOME}/.vim"
+rm -f ${HOME}/.ctags
+echo "Detete dirs ${HOME}/.ctags"

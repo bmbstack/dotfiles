@@ -27,7 +27,7 @@ create_symlinks() {
 	dotfiles=(".zshrc" ".tmux.conf" ".vimrc" ".gitconfig" ".ctags")
 	for dotfile in "${dotfiles[@]}"
 	do
-		ln -sf ${HOME}/${dotfile}
+		ln -sf ${PWD}/${dotfile} ${HOME}/${dotfile}
 		echo "Create symlink ${HOME}/${dotfile}"
 	done
 }
@@ -113,11 +113,11 @@ main() {
 	check_software_exist
 	install_oh_my_zsh
 	install_vundle
-    install_tpm
-    config_git
+	config_git
 	create_symlinks
 	config_zsh
 	config_tmux
+	install_tpm
 }
 
 main
