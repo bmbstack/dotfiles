@@ -653,8 +653,6 @@ vmap <leader>xg <Plug>(JavaComplete-Generate-AccessorGetter)
 " 生成读访问器代码
 vmap <leader>xa <Plug>(JavaComplete-Generate-AccessorSetterGetter)
 " 生成读写访问器代码
-nmap <C-b> :!make<CR>:!make run<CR>
-" 编译并运行Java程序
 "====end(Java Keymap)===="
 
 "======代码缩进======="
