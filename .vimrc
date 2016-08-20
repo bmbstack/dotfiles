@@ -68,28 +68,21 @@ inoremap kk <esc>
 
 nnoremap nw <C-W><C-W> 
 " 切换window
-nmap <C-j> <C-W>j 
+map <C-j> <C-W>j 
 " 切到下方window
-nmap <C-k> <C-W>k 
+map <C-k> <C-W>k 
 " 切到上方window
-nmap <C-h> <C-W>h 
+map <C-h> <C-W>h 
 " 切到左边window
-nmap <C-l> <C-W>l 
+map <C-l> <C-W>l 
 " 切到右边window
 
-imap <C-n> <down>
-" 向下移动光标, ↓
-imap <C-p> <up>
-" 向上移动光标, ↑
-imap <C-f> <right>
-" 向右移动光标, →
-imap <C-b> <left>
-" 向左移动光标, ←
 
-imap <C-a> <ESC>I
-" 移动到行首
-imap <C-e> <ESC>A
-" 移动到行尾
+"=======分割视图======"
+nmap <C-c> :sp<CR>  
+" 水平分割window
+nmap <C-v> :vsp<CR> 
+" 垂直分割window
 
 imap <C-f><C-w> <ESC>wa
 " 向右移动一个词
@@ -460,7 +453,7 @@ inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 " 未知
 inoremap <expr><C-y>  neocomplete#close_popup()
 " 未知
-inoremap <expr><C-c>  neocomplete#cancel_popup()
+inoremap <expr><C-e>  neocomplete#cancel_popup()
 " 未知
 " Close popup by <Space>.
 "inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
