@@ -195,6 +195,7 @@ let g:molokai_original=1
 nmap <leader>e :NERDTreeToggle<CR> 
 "打开或关闭左侧目录树
 let g:NERDTreeDirArrows=1
+let g:NERDTreeShowHidden=1
 let g:NERDTreeDirArrowExpandable='▸'
 let g:NERDTreeDirArrowCollapsible='▾'
 "====end(NERDTree Keymap)===="
