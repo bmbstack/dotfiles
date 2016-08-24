@@ -13,7 +13,7 @@ GIT_USER_EMAIL=`git config --global user.email`
 OH_MY_ZSH=${HOME}"/.oh-my-zsh"
 ZPLUG_HOME=${HOME}"/.zplug"
 FZF_HOME=${HOME}"/.fzf"
-VUNDLE=${HOME}"/.vim/bundle/Vundle.vim"
+VIM_PLUG=${HOME}"/.vim/autoload/plug.vim"
 TPM=${HOME}"/.tmux/plugins/tpm"
 
 # Pre check
@@ -53,7 +53,7 @@ install_oh_my_zsh() {
 }
 
 install_fzf() {
-	if [ -d "${FZF_HOME}"  ]; then
+	if [ -d "${FZF_HOME}" ]; then
 		cd "${FZF_HOME}"
 		echo "Change directory to `pwd`"
 		echo "${FZF_HOME} exists. Git pull to update..."
@@ -80,20 +80,15 @@ install_zlug() {
 	fi
 }
 
-# Vim install `Vundle` and plugins
-install_vundle() {
-	if [ -d "${VUNDLE}" ]; then
-		cd "${VUNDLE}"
-		echo "Change directory to `pwd`"
-		echo "${VUNDLE} exists. Git pull to update..."
-		git pull
-		cd - > /dev/null 2>&1
-		echo "Change directory back to `pwd`"
+install_vim_plug() {
+	if [ -f "${VIM_PLUG}" ]; then
+		echo "${VIM_PLUG} exists. update..."
 	else
-		echo "${VUNDLE} not exists. Git clone to create..."
-		git clone https://github.com/gmarik/Vundle.vim.git ${VUNDLE}
-		vim +BundleInstall +qall
+		echo "${VIM_PLUG} not exists. create..."
 	fi
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    vim +PlugInstall +qall
 }
 
 # tmux install 'tpm' and plugins
@@ -123,8 +118,8 @@ config_zsh() {
     else
         echo "Change shell to zsh"        
 	    chsh -s `which zsh`
-	    source ${HOME}/.zshrc
     fi
+    source ${HOME}/.zshrc
 }
 
 config_tmux() {
@@ -158,7 +153,7 @@ main() {
     install_oh_my_zsh
     install_fzf
     install_zlug
-    install_vundle
+    install_vim_plug
     install_tpm
     create_symlinks
     config_zsh
