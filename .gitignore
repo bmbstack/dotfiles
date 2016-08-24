@@ -2,3 +2,4 @@ custom/*
 .zsh/*
 .zsh/.zsh
 .gitconfig
+.ctags

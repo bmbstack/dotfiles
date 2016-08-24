@@ -6,23 +6,40 @@ DISABLE_CORRECTION="true"
 DISABLE_AUTO_TITLE="true"
 DISABLE_AUTO_UPDATE="true"
 
-plugins=(git svn python colored-man tmux git-flow autojump)
+plugins=(git svn python colored-man tmux git-flow)
 
-# TODO, get path by command
 WORK_DIR="$HOME/.dotfiles/"
 PRE_CUSTOM="${WORK_DIR}/custom/pre_custom.zsh"
 if [ -e "${PRE_CUSTOM}" ]; then
     source ${PRE_CUSTOM}
 fi
 
+autoload -U compinit
+compinit
+setopt correctall
+autoload -U promptinit
+promptinit
+
 ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
-source ~/.zsh/exports.zsh
-source ~/.zsh/aliases.zsh
-source ~/.zsh/functions.zsh
-source ~/.zsh/history.zsh
-source ~/.zsh/quickjump.zsh
+source ~/.zplug/init.zsh
+zplug "~/.zsh", from:local
+zplug "pindexis/qfc", use:"bin/qfc.sh"
+zplug "b4b4r07/enhancd", use:init.sh
+zplug "zsh-users/zsh-history-substring-search"
+zplug "Jxck/dotfiles"
+zplug "zsh-users/zsh-syntax-highlighting", nice:10
+
+#zplug load --verbose
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+[[ -s "$HOME/.zplug/repos/pindexis/qfc/bin/qfc.sh"  ]] && source "$HOME/.zplug/repos/pindexis/qfc/bin/qfc.sh"
 
 # disable CTRL+S from sending XOFF
 stty ixany
@@ -112,5 +129,8 @@ export NGNIX_HOME="/usr/local/nginx"
 export PHP_HOME="/usr/local/php"
 export MYSQL_HOME="/usr/local/mysql"
 export PATH="$PATH:/root/.node/bin:$JAVA_HOME/bin:$APACHE_HOME/bin:$NGNIX_HOME/sbin:$PHP_HOME/bin:$MYSQL_HOME/bin:$PSYSH_HOME/bin"
+
+ENHANCD_FILTER=fzf
+export ENHANCD_FILTER
 
 #==================================================PATH end============================================================================

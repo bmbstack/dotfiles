@@ -1,6 +1,6 @@
 
 "==========================================================================="
-" ProjectLink: https://github.com/bmbstack/dotfiles
+"  ProjectLink: https://github.com/bmbstack/dotfiles
 " AwesomeLink: https://github.com/yangyangwithgnu/use_vim_as_ide
 " PluginList: http://www.vimawesome.com
 " Author: bmbstack 
@@ -43,7 +43,7 @@ set autoindent " 自动缩进
 set showmatch " 设置匹配模式，类似当输入一个左括号时会匹配相应的右括号   
 set showmode " 显示模式
 set cursorline " 高亮当前行
-set cursorcolumn
+"set cursorcolumn
 set fileencodings=utf-8,gb18030,cp936,big5 " 显示文件编码格式
 set t_Co=256 " 使用256配色
 set backspace=2 
@@ -108,73 +108,71 @@ nmap v- :vertical resize -5<CR>
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'gmarik/Vundle.vim' "插件管理器
-Plugin 'tomasr/molokai' "molokai主题
-Plugin 'haya14busa/incsearch.vim' "iMproved searching for vim
-Plugin 'scrooloose/nerdtree' "树形目录
-Plugin 'Xuyuanp/nerdtree-git-plugin' "nerdtree中显示git状态
-Plugin 'tpope/vim-fugitive' "Git wrapper
-Plugin 'scrooloose/syntastic' "语法检查
-Plugin 'kien/rainbow_parentheses.vim' "多彩括号匹配,例如对于lisp语言
-Plugin 'tpope/vim-surround' "is all about surroundings, parentheses, brackets, quotes, XML tags, and more
-Plugin 'kien/ctrlp.vim'   "file, buffer, MRU, tag, etc finder
-Plugin 'Lokaltog/vim-powerline'
-Plugin 'scrooloose/nerdcommenter' "注释助手
-Plugin 'xolox/vim-misc' "easytags依赖项
-Plugin 'xolox/vim-easytags' "tags生成器,避免使用ctags
-Plugin 'majutsushi/tagbar' "显示tagbar目录
-Plugin 'pangloss/vim-javascript' "js缩进语法支持
-Plugin 'mxw/vim-jsx' " jsx 语法高亮
-Plugin 'isRuslan/vim-es6' " ECMAScript 6语法高亮
-Plugin 'mtscout6/vim-tagbar-css'
-Plugin 'ervandew/supertab' "插入模式下Tab补全
-Plugin 'tpope/vim-repeat' "repeating
-Plugin 'godlygeek/tabular' "文本Tab补齐
-Plugin 'easymotion/vim-easymotion' "跳转提示
-Plugin 'haya14busa/incsearch-easymotion.vim' "incsearch-easymotion
-Plugin 'mattn/emmet-vim' "emmet.io; html:5 ==> <c-y>,
-Plugin 'SirVer/ultisnips' "Track the engine
-Plugin 'honza/vim-snippets' "代码片段
-Plugin 'Shougo/unite.vim' "find files, buffers, MRU
-Plugin 'mkitt/tabline.vim' "Tab line
-Plugin 'klen/python-mode' "Python mode
-Plugin 'nvie/vim-flake8' "Python代码规范利器
-Plugin 'davidhalter/jedi-vim' "Python代码补全
-Plugin 'othree/html5.vim' "html5代码补全
-Plugin 'plasticboy/vim-markdown' "markdown syntax
-Plugin 'groenewege/vim-less' "less syntax
-Plugin 'elzr/vim-json' "json syntax
-Plugin 'jlanzarotta/bufexplorer'
-Plugin 'neocomplcache-snippets_complete'
-Plugin 'Shougo/unite-outline'
-Plugin 'Shougo/neocomplete'
-Plugin 'Shougo/neosnippet'
-Plugin 'Shougo/neosnippet-snippets'
-Plugin 'fatih/vim-go' "golang开发套件
-Plugin 'airblade/vim-gitgutter'
-Plugin 'bling/vim-bufferline' "buffer line
-Plugin 'junegunn/vim-xmark'
-Plugin 'shawncplus/phpcomplete.vim'
-Plugin 'stanangeloff/php.vim'
-Plugin 'taglist.vim'
-Plugin 'rking/ag.vim' "超级ag搜索
-Plugin 'JulesWang/css.vim'
-Plugin 'cakebaker/scss-syntax.vim'"
-Plugin 'ashisha/image.vim'
-Plugin 'Konfekt/FastFold'
-Plugin 'mhinz/vim-startify'
-Plugin 'hoaproject/Contributions-Vim-Pp'
-Plugin 'jiangmiao/auto-pairs'
-" Plugin 'skammer/vim-css-color' " 严重影响html, less的打开速度
-Plugin 'artur-shaik/vim-javacomplete2' " Java 自动完成
-Plugin 'wakatime/vim-wakatime'
+Plug 'gmarik/Vundle.vim' "插件管理器
+Plug 'tomasr/molokai' "molokai主题
+Plug 'haya14busa/incsearch.vim' "iMproved searching for vim
+Plug 'scrooloose/nerdtree' "树形目录
+Plug 'Xuyuanp/nerdtree-git-plugin' "nerdtree中显示git状态
+Plug 'tpope/vim-fugitive' "Git wrapper
+Plug 'scrooloose/syntastic' "语法检查
+Plug 'kien/rainbow_parentheses.vim' "多彩括号匹配,例如对于lisp语言
+Plug 'tpope/vim-surround' "is all about surroundings, parentheses, brackets, quotes, XML tags, and more
+Plug 'kien/ctrlp.vim'   "file, buffer, MRU, tag, etc finder
+Plug 'Lokaltog/vim-powerline'
+Plug 'scrooloose/nerdcommenter' "注释助手
+Plug 'xolox/vim-misc' "easytags依赖项
+Plug 'xolox/vim-easytags' "tags生成器,避免使用ctags
+Plug 'majutsushi/tagbar' "显示tagbar目录
+Plug 'pangloss/vim-javascript' "js缩进语法支持
+Plug 'mxw/vim-jsx' " jsx 语法高亮
+Plug 'isRuslan/vim-es6' " ECMAScript 6语法高亮
+Plug 'mtscout6/vim-tagbar-css'
+Plug 'ervandew/supertab' "插入模式下Tab补全
+Plug 'tpope/vim-repeat' "repeating
+Plug 'godlygeek/tabular' "文本Tab补齐
+Plug 'easymotion/vim-easymotion' "跳转提示
+Plug 'haya14busa/incsearch-easymotion.vim' "incsearch-easymotion
+Plug 'mattn/emmet-vim' "emmet.io; html:5 ==> <c-y>,
+Plug 'SirVer/ultisnips' "Track the engine
+Plug 'honza/vim-snippets' "代码片段
+Plug 'Shougo/unite.vim' "find files, buffers, MRU
+Plug 'mkitt/tabline.vim' "Tab line
+Plug 'klen/python-mode' "Python mode
+Plug 'nvie/vim-flake8' "Python代码规范利器
+Plug 'davidhalter/jedi-vim' "Python代码补全
+Plug 'othree/html5.vim' "html5代码补全
+Plug 'plasticboy/vim-markdown' "markdown syntax
+Plug 'groenewege/vim-less' "less syntax
+Plug 'elzr/vim-json' "json syntax
+Plug 'jlanzarotta/bufexplorer'
+Plug 'neocomplcache-snippets_complete'
+Plug 'Shougo/unite-outline'
+Plug 'Shougo/neocomplete'
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'fatih/vim-go' "golang开发套件
+Plug 'airblade/vim-gitgutter'
+Plug 'bling/vim-bufferline' "buffer line
+Plug 'junegunn/vim-xmark'
+Plug 'shawncplus/phpcomplete.vim'
+Plug 'stanangeloff/php.vim'
+Plug 'taglist.vim'
+Plug 'rking/ag.vim' "超级ag搜索
+Plug 'JulesWang/css.vim'
+Plug 'cakebaker/scss-syntax.vim'"
+Plug 'ashisha/image.vim'
+Plug 'Konfekt/FastFold'
+Plug 'mhinz/vim-startify'
+Plug 'hoaproject/Contributions-Vim-Pp'
+Plug 'jiangmiao/auto-pairs'
+" Plug 'skammer/vim-css-color' " 严重影响html, less的打开速度
+Plug 'artur-shaik/vim-javacomplete2' " Java 自动完成
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  } "FZF文件搜索
+Plug 'wakatime/vim-wakatime'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call plug#end()
 
 "=======主题配置======"
 
