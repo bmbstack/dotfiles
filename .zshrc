@@ -25,7 +25,6 @@ source $ZSH/oh-my-zsh.sh
 
 source ~/.zplug/init.zsh
 zplug "~/.zsh", from:local
-zplug "pindexis/qfc", use:"bin/qfc.sh"
 zplug "b4b4r07/enhancd", use:init.sh
 zplug "zsh-users/zsh-history-substring-search"
 zplug "Jxck/dotfiles"
@@ -39,7 +38,7 @@ if ! zplug check --verbose; then
     fi
 fi
 
-[[ -s "$HOME/.zplug/repos/pindexis/qfc/bin/qfc.sh"  ]] && source "$HOME/.zplug/repos/pindexis/qfc/bin/qfc.sh"
+[[ -s "$HOME/.qfc/bin/qfc.sh"  ]] && source "$HOME/.qfc/bin/qfc.sh"
 
 # disable CTRL+S from sending XOFF
 stty ixany
