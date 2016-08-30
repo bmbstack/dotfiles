@@ -332,7 +332,7 @@ let g:UltiSnipsEditSplit="vertical"
 "------------------------------------------------------------------------------
 " airline
 "------------------------------------------------------------------------------
-let g:airline_theme="luna" 
+let g:airline_theme="dark" 
 let g:airline_powerline_fonts=0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
