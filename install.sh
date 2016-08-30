@@ -178,6 +178,6 @@ main() {
 
 main
 
-echo "Please: source $HOME/.zshrc"
-echo "Please: zplug load"
-echo "[SETUP OK]"
+echo -e "Please: \e[1;4msource $HOME/.zshrc\033[0m"
+echo -e "Please: \e[1;4mzplug load\033[0m"
+echo -e "[SETUP OK]"
