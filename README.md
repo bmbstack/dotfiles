@@ -15,6 +15,8 @@ Before Install, make sure you have installed zsh.
 Install:
 
 	./install.sh
+    source ~/.zshrc
+    zplug load
 
 Uninstall:
 
