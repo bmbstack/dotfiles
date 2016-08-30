@@ -120,7 +120,8 @@ Plug 'scrooloose/syntastic' "语法检查
 Plug 'kien/rainbow_parentheses.vim' "多彩括号匹配,例如对于lisp语言
 Plug 'tpope/vim-surround' "is all about surroundings, parentheses, brackets, quotes, XML tags, and more
 Plug 'kien/ctrlp.vim'   "file, buffer, MRU, tag, etc finder
-Plug 'Lokaltog/vim-powerline'
+Plug 'vim-airline/vim-airline' "powerline替代者
+Plug 'vim-airline/vim-airline-themes' "airline 主题
 Plug 'scrooloose/nerdcommenter' "注释助手
 Plug 'xolox/vim-misc' "easytags依赖项
 Plug 'xolox/vim-easytags' "tags生成器,避免使用ctags
@@ -128,7 +129,7 @@ Plug 'majutsushi/tagbar' "显示tagbar目录
 Plug 'pangloss/vim-javascript' "js缩进语法支持
 Plug 'mxw/vim-jsx' " jsx 语法高亮
 Plug 'isRuslan/vim-es6' " ECMAScript 6语法高亮
-Plug 'mtscout6/vim-tagbar-css'
+Plug 'mtscout6/vim-tagbar-css' "css tagbar
 Plug 'ervandew/supertab' "插入模式下Tab补全
 Plug 'tpope/vim-repeat' "repeating
 Plug 'godlygeek/tabular' "文本Tab补齐
@@ -146,7 +147,7 @@ Plug 'othree/html5.vim' "html5代码补全
 Plug 'plasticboy/vim-markdown' "markdown syntax
 Plug 'groenewege/vim-less' "less syntax
 Plug 'elzr/vim-json' "json syntax
-Plug 'jlanzarotta/bufexplorer'
+Plug 'jlanzarotta/bufexplorer' "buffer浏览器
 Plug 'neocomplcache-snippets_complete'
 Plug 'Shougo/unite-outline'
 Plug 'Shougo/neocomplete'
@@ -154,7 +155,6 @@ Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'fatih/vim-go' "golang开发套件
 Plug 'airblade/vim-gitgutter'
-Plug 'bling/vim-bufferline' "buffer line
 Plug 'junegunn/vim-xmark'
 Plug 'shawncplus/phpcomplete.vim'
 Plug 'stanangeloff/php.vim'
@@ -167,7 +167,6 @@ Plug 'Konfekt/FastFold'
 Plug 'mhinz/vim-startify'
 Plug 'hoaproject/Contributions-Vim-Pp'
 Plug 'jiangmiao/auto-pairs'
-" Plug 'skammer/vim-css-color' " 严重影响html, less的打开速度
 Plug 'artur-shaik/vim-javacomplete2' " Java 自动完成
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  } "FZF文件搜索
 Plug 'wakatime/vim-wakatime'
@@ -331,28 +330,13 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 
 "------------------------------------------------------------------------------
-" powerline
+" airline
 "------------------------------------------------------------------------------
-let g:Powerline_symbols = 'unicode' " compatible/unicode/fancy
-set laststatus=2   " Always show the statusline
-set encoding=utf-8 " Necessary to show Unicode glyphs
-set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors"
-au BufRead,BufNewFile *.md set filetype=markdown  " .md default is modula2"
-
-"==========davidhalter/jedi-vim======"
-autocmd FileType python setlocal completeopt-=preview    " disable docstring
-let g:jedi#completions_command = "<C-N>"
-
-"=======vim-flake8======="
-autocmd FileType python map <buffer> <F3> :call Flake8()<CR>
-let g:flake8_quickfix_height=5
-let g:flake8_show_in_gutter=1
-highlight link Flake8_Error      Error
-highlight link Flake8_Warning    WarningMsg
-highlight link Flake8_Complexity WarningMsg
-highlight link Flake8_Naming     WarningMsg
-highlight link Flake8_PyFlake    WarningMsg
-
+let g:airline_theme="luna" 
+let g:airline_powerline_fonts=0
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
 "------------------------------------------------------------------------------
 " rainbow_parentheses
 "------------------------------------------------------------------------------
