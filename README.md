@@ -11,6 +11,7 @@ My dotfiles for:
 ## Quick Install & Uninstall ##
 
 Before Install, make sure you have installed zsh.
+注：neocomplete requires Vim 7.3.885 or later with Lua support ("+lua")，with Python support ("+python")
 
 Install:
 
