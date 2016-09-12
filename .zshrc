@@ -25,6 +25,7 @@ source $ZSH/oh-my-zsh.sh
 
 source ~/.zplug/init.zsh
 zplug "~/.zsh", from:local
+zplug "paoloantinori/hhighlighter", use:h.sh
 zplug "b4b4r07/enhancd", use:init.sh
 zplug "zsh-users/zsh-history-substring-search"
 zplug "Jxck/dotfiles"

@@ -12,6 +12,11 @@ My dotfiles for:
 
 Before Install, make sure you have installed zsh.
 
+###注：
+- python (2.7+ or 3.0+)
+- Bash-4.0+ or Zshell.
+- neocomplete requires Vim 7.3.885 or later with Lua support ("+lua")，with Python support ("+python")
+
 Install:
 
 	./install.sh
