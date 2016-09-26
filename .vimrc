@@ -77,29 +77,6 @@ nmap <C-h> <C-W>h
 nmap <C-l> <C-W>l 
 " 切到右边window
 
-imap <C-f> <right>
-" 光标向右移动一个字符
-imap <C-b> <left>
-" 光标向左移动一个字符
-imap <C-p> <up>
-" 光标向上移动一个字符
-imap <C-n> <down>
-" 光标向下移动一个字符
-
-imap <C-a> <ESC>I
-" 移动到行首
-imap <C-e> <ESC>A
-" 移动到行尾
-
-"=======resize视图======="
-nmap h= :resize +5<CR>  
-" 水平方向放大window
-nmap h- :resize -5<CR>  
-" 水平方向缩小window
-nmap v= :vertical resize +5<CR> 
-" 垂直方向放大window
-nmap v- :vertical resize -5<CR> 
-" 垂直方向缩小window
 "====end(通用 Keymap)===="
 
 "=============================================================================="
