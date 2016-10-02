@@ -136,3 +136,4 @@ export ENHANCD_FILTER
 #==================================================PATH end============================================================================
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.zsh/aliases.zsh ] && source ~/.zsh/aliases.zsh
