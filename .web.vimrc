@@ -111,7 +111,8 @@ filetype off                  " required
 call plug#begin('~/.vim/plugged')
 
 Plug 'gmarik/Vundle.vim' "插件管理器
-Plug 'tomasr/molokai' "molokai主题
+" Plug 'tomasr/molokai' "molokai主题
+Plug 'WellerQu/vim' "dracula主题
 Plug 'haya14busa/incsearch.vim' "iMproved searching for vim
 Plug 'scrooloose/nerdtree' "树形目录
 Plug 'Xuyuanp/nerdtree-git-plugin' "nerdtree中显示git状态
@@ -168,9 +169,10 @@ call plug#end()
 
 "=======主题配置======"
 
-set background=dark
-colorscheme molokai
-let g:molokai_original=1
+"set background=dark
+"colorscheme molokai
+"let g:molokai_original=1
+color dracula
 
 "=============================================================================="
 "                            Plugin configuration                              "
