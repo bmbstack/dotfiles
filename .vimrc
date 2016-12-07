@@ -654,3 +654,5 @@ autocmd! bufwritepost [_.]vimrc source %
 if exists('$TMUX')
     set term=screen-256color
 endif
+
+set clipboard=unnamed
