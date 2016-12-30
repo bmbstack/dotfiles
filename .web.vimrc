@@ -112,7 +112,8 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'gmarik/Vundle.vim' "插件管理器
 " Plug 'tomasr/molokai' "molokai主题
-Plug 'WellerQu/vim' "dracula主题
+" Plug 'WellerQu/vim' "dracula主题
+Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'haya14busa/incsearch.vim' "iMproved searching for vim
 Plug 'scrooloose/nerdtree' "树形目录
 Plug 'Xuyuanp/nerdtree-git-plugin' "nerdtree中显示git状态
@@ -128,6 +129,7 @@ Plug 'xolox/vim-misc' "easytags依赖项
 Plug 'xolox/vim-easytags' "tags生成器,避免使用ctags
 Plug 'majutsushi/tagbar' "显示tagbar目录
 Plug 'pangloss/vim-javascript' "js缩进语法支持
+Plug 'heavenshell/vim-jsdoc' " jsdoc
 Plug 'mxw/vim-jsx' " jsx 语法高亮
 Plug 'posva/vim-vue' " Vim syntax highlighting for Vue components
 Plug 'isRuslan/vim-es6' " ECMAScript 6语法高亮
@@ -169,10 +171,11 @@ call plug#end()
 
 "=======主题配置======"
 
-"set background=dark
-"colorscheme molokai
+set background=dark
+colorscheme hybrid_reverse
 "let g:molokai_original=1
-color dracula
+
+" color dracula
 
 "=============================================================================="
 "                            Plugin configuration                              "
@@ -327,7 +330,7 @@ let g:UltiSnipsEditSplit="vertical"
 "------------------------------------------------------------------------------
 " airline
 "------------------------------------------------------------------------------
-let g:airline_theme="dark" 
+let g:airline_theme="hybrid" 
 let g:airline_powerline_fonts=0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
@@ -388,6 +391,26 @@ nmap <leader>dup :diffupdate<cr>
 " 未知
 "====end(Fugitive Keymap)===="
 
+"------------------------------------------------------------------------------
+" JsDoc  more: http://vimawesome.com/plugin/vim-jsdoc
+"------------------------------------------------------------------------------
+"====begin(NeoComplete Keymap)===="
+
+let g:jsdoc_allow_input_prompt = 1
+let g:jsdoc_input_description = 1
+let g:jsdoc_additional_descriptions = 1
+let g:jsdoc_return = 1
+let g:jsdoc_return_type = 1
+let g:jsdoc_return_description = 1
+let g:jsdoc_access_descriptions = 1
+let g:jsdoc_underscore_private = 1
+" let g:jsdoc_allow_shorthand = 1
+let g:jsdoc_param_description_separator = ' '
+let g:jsdoc_enable_es6 = 1
+
+nmap <silent> <C-S-;> <Plug>(jsdoc)
+
+"====end(Fugitive Keymap)===="
 
 "------------------------------------------------------------------------------
 " NeoComplete

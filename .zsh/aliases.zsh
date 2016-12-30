@@ -35,3 +35,4 @@ alias vmssh="cd $HOME/git/homestead && vagrant ssh"
 alias emacs="emacs -nw"
 
 alias webvim="vim -u ~/.web.vimrc"
+alias mwebvim="mvim -u ~/.web.vimrc"

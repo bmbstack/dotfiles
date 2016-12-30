@@ -111,7 +111,8 @@ filetype off                  " required
 call plug#begin('~/.vim/plugged')
 
 Plug 'gmarik/Vundle.vim' "插件管理器
-Plug 'tomasr/molokai' "molokai主题
+" Plug 'tomasr/molokai' "molokai主题
+Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'haya14busa/incsearch.vim' "iMproved searching for vim
 Plug 'scrooloose/nerdtree' "树形目录
 Plug 'Xuyuanp/nerdtree-git-plugin' "nerdtree中显示git状态
@@ -130,6 +131,7 @@ Plug 'pangloss/vim-javascript' "js缩进语法支持
 Plug 'mxw/vim-jsx' " jsx 语法高亮
 Plug 'posva/vim-vue' " Vim syntax highlighting for Vue components
 Plug 'isRuslan/vim-es6' " ECMAScript 6语法高亮
+Plug 'mtscout6/syntastic-local-eslint.vim' " ESLint 语法检查
 Plug 'mtscout6/vim-tagbar-css' "css tagbar
 Plug 'ervandew/supertab' "插入模式下Tab补全
 Plug 'tpope/vim-repeat' "repeating
@@ -177,8 +179,11 @@ call plug#end()
 "=======主题配置======"
 
 set background=dark
-colorscheme molokai
-let g:molokai_original=1
+colorscheme hybrid_reverse
+
+"set background=dark
+"colorscheme molokai
+"let g:molokai_original=1
 
 "=============================================================================="
 "                            Plugin configuration                              "
@@ -333,7 +338,7 @@ let g:UltiSnipsEditSplit="vertical"
 "------------------------------------------------------------------------------
 " airline
 "------------------------------------------------------------------------------
-let g:airline_theme="dark" 
+let g:airline_theme="hybrid" 
 let g:airline_powerline_fonts=0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
