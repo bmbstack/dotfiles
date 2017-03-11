@@ -47,7 +47,7 @@ set cursorline " 高亮当前行
 set fileencodings=utf-8,gb18030,cp936,big5 " 显示文件编码格式
 set t_Co=256 " 使用256配色
 set backspace=2 
-set nowrap  "禁止折行
+"set nowrap  "禁止折行
 set hls
 
 
@@ -112,12 +112,10 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'gmarik/Vundle.vim' "插件管理器
 " Plug 'tomasr/molokai' "molokai主题
-" Plug 'WellerQu/vim' "dracula主题
 Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'haya14busa/incsearch.vim' "iMproved searching for vim
 Plug 'scrooloose/nerdtree' "树形目录
 Plug 'Xuyuanp/nerdtree-git-plugin' "nerdtree中显示git状态
-Plug 'tpope/vim-fugitive' "Git wrapper
 Plug 'scrooloose/syntastic' "语法检查
 Plug 'kien/rainbow_parentheses.vim' "多彩括号匹配,例如对于lisp语言
 Plug 'tpope/vim-surround' "is all about surroundings, parentheses, brackets, quotes, XML tags, and more
@@ -125,28 +123,30 @@ Plug 'kien/ctrlp.vim'   "file, buffer, MRU, tag, etc finder
 Plug 'vim-airline/vim-airline' "powerline替代者
 Plug 'vim-airline/vim-airline-themes' "airline 主题
 Plug 'scrooloose/nerdcommenter' "注释助手
-Plug 'xolox/vim-misc' "easytags依赖项
-Plug 'xolox/vim-easytags' "tags生成器,避免使用ctags
-Plug 'majutsushi/tagbar' "显示tagbar目录
+"Plug 'xolox/vim-misc' "easytags依赖项
+"Plug 'xolox/vim-easytags' "tags生成器,避免使用ctags
 Plug 'pangloss/vim-javascript' "js缩进语法支持
-Plug 'heavenshell/vim-jsdoc' " jsdoc
 Plug 'mxw/vim-jsx' " jsx 语法高亮
 Plug 'posva/vim-vue' " Vim syntax highlighting for Vue components
 Plug 'isRuslan/vim-es6' " ECMAScript 6语法高亮
-Plug 'mtscout6/vim-tagbar-css' "css tagbar
 Plug 'ervandew/supertab' "插入模式下Tab补全
 Plug 'tpope/vim-repeat' "repeating
 Plug 'godlygeek/tabular' "文本Tab补齐
 Plug 'easymotion/vim-easymotion' "跳转提示
 Plug 'haya14busa/incsearch-easymotion.vim' "incsearch-easymotion
 Plug 'mattn/emmet-vim' "emmet.io; html:5 ==> <c-y>,
-Plug 'SirVer/ultisnips' "Track the engine
 Plug 'honza/vim-snippets' "代码片段
+Plug 'Shougo/vimproc' " vimproc is required by unite
 Plug 'Shougo/unite.vim' "find files, buffers, MRU
 Plug 'mkitt/tabline.vim' "Tab line
+Plug 'klen/python-mode' "Python mode
+Plug 'nvie/vim-flake8' "Python代码规范利器
+Plug 'davidhalter/jedi-vim' "Python代码补全
 Plug 'othree/html5.vim' "html5代码补全
 Plug 'plasticboy/vim-markdown' "markdown syntax
 Plug 'groenewege/vim-less' "less syntax
+Plug 'JulesWang/css.vim'
+Plug 'cakebaker/scss-syntax.vim'"
 Plug 'elzr/vim-json' "json syntax
 Plug 'jlanzarotta/bufexplorer' "buffer浏览器
 Plug 'neocomplcache-snippets_complete'
@@ -154,18 +154,18 @@ Plug 'Shougo/unite-outline'
 Plug 'Shougo/neocomplete'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
-Plug 'airblade/vim-gitgutter'
-Plug 'taglist.vim'
+Plug 'fatih/vim-go' "golang开发套件
 Plug 'rking/ag.vim' "超级ag搜索
-Plug 'JulesWang/css.vim'
-Plug 'cakebaker/scss-syntax.vim'"
 Plug 'ashisha/image.vim'
 Plug 'Konfekt/FastFold'
 Plug 'mhinz/vim-startify'
 Plug 'hoaproject/Contributions-Vim-Pp'
 Plug 'jiangmiao/auto-pairs'
+Plug 'artur-shaik/vim-javacomplete2' " Java 自动完成
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  } "FZF文件搜索
 Plug 'wakatime/vim-wakatime'
+Plug 'chemzqm/wxapp.vim' " 微信小程序补全插件
+Plug 'chemzqm/unite-js-func'  " 文件内函数跳转
 
 call plug#end()
 
@@ -173,9 +173,10 @@ call plug#end()
 
 set background=dark
 colorscheme hybrid_reverse
-"let g:molokai_original=1
 
-" color dracula
+"set background=dark
+"colorscheme molokai
+"let g:molokai_original=1
 
 "=============================================================================="
 "                            Plugin configuration                              "
@@ -391,26 +392,6 @@ nmap <leader>dup :diffupdate<cr>
 " 未知
 "====end(Fugitive Keymap)===="
 
-"------------------------------------------------------------------------------
-" JsDoc  more: http://vimawesome.com/plugin/vim-jsdoc
-"------------------------------------------------------------------------------
-"====begin(NeoComplete Keymap)===="
-
-let g:jsdoc_allow_input_prompt = 1
-let g:jsdoc_input_description = 1
-let g:jsdoc_additional_descriptions = 1
-let g:jsdoc_return = 1
-let g:jsdoc_return_type = 1
-let g:jsdoc_return_description = 1
-let g:jsdoc_access_descriptions = 1
-let g:jsdoc_underscore_private = 1
-" let g:jsdoc_allow_shorthand = 1
-let g:jsdoc_param_description_separator = ' '
-let g:jsdoc_enable_es6 = 1
-
-nmap <silent> <C-S-;> <Plug>(jsdoc)
-
-"====end(Fugitive Keymap)===="
 
 "------------------------------------------------------------------------------
 " NeoComplete
@@ -578,9 +559,10 @@ nmap <Leader>9 9gt
 "====end(Tabline Keymap)===="
 
 "------------------------------------------------------------------------------
-" vim-css-color
+" scss-syntax
 "------------------------------------------------------------------------------
-let g:cssColorVimDoNotMessMyUpdatetime = 1
+autocmd FileType sass set iskeyword+=-
+au BufRead,BufNewFile *.sass set filetype=sass.css
 
 "------------------------------------------------------------------------------
 "vim-jsx 
@@ -671,3 +653,5 @@ autocmd! bufwritepost [_.]vimrc source %
 if exists('$TMUX')
     set term=screen-256color
 endif
+
+set clipboard=unnamed
