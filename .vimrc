@@ -173,6 +173,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'artur-shaik/vim-javacomplete2' " Java 自动完成
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  } "FZF文件搜索
 Plug 'wakatime/vim-wakatime'
+Plug 'chemzqm/wxapp.vim' " 微信小程序补全插件
+Plug 'chemzqm/unite-js-func'  " 文件内函数跳转
 
 call plug#end()
 
@@ -564,11 +566,6 @@ nmap <Leader>8 8gt
 nmap <Leader>9 9gt
 " 跳转到第九个tab
 "====end(Tabline Keymap)===="
-
-"------------------------------------------------------------------------------
-" vim-css-color
-"------------------------------------------------------------------------------
-let g:cssColorVimDoNotMessMyUpdatetime = 1
 
 "------------------------------------------------------------------------------
 "vim-jsx 

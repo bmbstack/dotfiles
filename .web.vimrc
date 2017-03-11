@@ -135,6 +135,7 @@ Plug 'godlygeek/tabular' "文本Tab补齐
 Plug 'easymotion/vim-easymotion' "跳转提示
 Plug 'haya14busa/incsearch-easymotion.vim' "incsearch-easymotion
 Plug 'mattn/emmet-vim' "emmet.io; html:5 ==> <c-y>,
+Plug 'SirVer/ultisnips' "Track the engine
 Plug 'honza/vim-snippets' "代码片段
 Plug 'Shougo/vimproc' " vimproc is required by unite
 Plug 'Shougo/unite.vim' "find files, buffers, MRU
