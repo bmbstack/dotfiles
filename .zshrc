@@ -29,7 +29,6 @@ zplug "paoloantinori/hhighlighter", use:h.sh
 zplug "b4b4r07/enhancd", use:init.sh
 zplug "zsh-users/zsh-history-substring-search"
 zplug "Jxck/dotfiles"
-zplug "zsh-users/zsh-syntax-highlighting", nice:10
 
 #zplug load --verbose
 if ! zplug check --verbose; then
