@@ -127,6 +127,12 @@ Plug 'scrooloose/nerdcommenter' "注释助手
 "Plug 'xolox/vim-easytags' "tags生成器,避免使用ctags
 Plug 'pangloss/vim-javascript' "js缩进语法支持
 Plug 'mxw/vim-jsx' " jsx 语法高亮
+" ES2015 code snippets (Optional)
+Plug 'epilande/vim-es2015-snippets'
+" React code snippets
+Plug 'epilande/vim-react-snippets'
+" Trigger configuration (Optional)  let g:UltiSnipsExpandTrigger="<C-l>"
+Plug 'SirVer/ultisnips'  
 Plug 'posva/vim-vue' " Vim syntax highlighting for Vue components
 Plug 'isRuslan/vim-es6' " ECMAScript 6语法高亮
 Plug 'ervandew/supertab' "插入模式下Tab补全
