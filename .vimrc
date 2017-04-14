@@ -316,7 +316,8 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_html_tidy_exec = 'tidy5'
 let g:syntastic_python_checkers = ['pylint']
-let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
+"let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
+let g:syntastic_php_checkers = ['php'] 
 
 "------------------------------------------------------------------------------
 " Tagbar
