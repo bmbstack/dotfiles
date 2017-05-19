@@ -156,7 +156,6 @@ Plug 'JulesWang/css.vim'
 Plug 'cakebaker/scss-syntax.vim'"
 Plug 'elzr/vim-json' "json syntax
 Plug 'jlanzarotta/bufexplorer' "buffer浏览器
-Plug 'neocomplcache-snippets_complete'
 Plug 'Shougo/unite-outline'
 Plug 'Shougo/neocomplete'
 Plug 'Shougo/neosnippet'
