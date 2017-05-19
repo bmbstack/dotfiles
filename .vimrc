@@ -157,7 +157,6 @@ Plug 'plasticboy/vim-markdown' "markdown syntax
 Plug 'groenewege/vim-less' "less syntax
 Plug 'elzr/vim-json' "json syntax
 Plug 'jlanzarotta/bufexplorer' "buffer浏览器
-Plug 'neocomplcache-snippets_complete'
 Plug 'Shougo/unite-outline'
 Plug 'Shougo/neocomplete'
 Plug 'Shougo/neosnippet'
@@ -167,7 +166,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/vim-xmark'
 Plug 'shawncplus/phpcomplete.vim'
 Plug 'stanangeloff/php.vim'
-Plug 'taglist.vim'
 Plug 'rking/ag.vim' "超级ag搜索
 Plug 'JulesWang/css.vim'
 Plug 'cakebaker/scss-syntax.vim'"
