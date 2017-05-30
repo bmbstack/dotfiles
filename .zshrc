@@ -118,6 +118,7 @@ export PATH="$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools"
 # Golang
 export GOROOT="/usr/local/go"
 export GOPATH="$HOME/go"
+export GOBIN="$HOME/go/bin"
 export GO15VENDOREXPERIMENT=1
 export PATH="$PATH:$GOPATH/bin:$GOROOT/bin"
 
@@ -128,6 +129,13 @@ export NGNIX_HOME="/usr/local/nginx"
 export PHP_HOME="/usr/local/php"
 export MYSQL_HOME="/usr/local/mysql"
 export PATH="$PATH:/root/.node/bin:$JAVA_HOME/bin:$APACHE_HOME/bin:$NGNIX_HOME/sbin:$PHP_HOME/bin:$MYSQL_HOME/bin:$PSYSH_HOME/bin"
+
+# Lantern
+#export http_proxy=http://127.0.0.1:52442
+#export https_proxy=$http_proxy
+#export ftp_proxy=$http_proxy
+#export rsync_proxy=$http_proxy
+#export no_proxy="localhost,127.0.0.1,.dade.com"
 
 ENHANCD_FILTER=fzf
 export ENHANCD_FILTER
