@@ -104,7 +104,7 @@ export PATH="$PATH:$BREW_HOME/bin"
 
 # Java 
 export JAVA_HOME="/usr/local/java"
-export CLASSPATH=$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib
+export CLASSPATH="$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib"
 export PATH="$PATH:$JAVA_HOME/bin"
 
 # Play framework
