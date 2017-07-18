@@ -167,7 +167,7 @@ Plug 'Konfekt/FastFold'
 Plug 'mhinz/vim-startify'
 Plug 'hoaproject/Contributions-Vim-Pp'
 Plug 'jiangmiao/auto-pairs'
-Plug 'artur-shaik/vim-javacomplete2' " Java 自动完成
+"Plug 'artur-shaik/vim-javacomplete2' " Java 自动完成
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  } "FZF文件搜索
 Plug 'wakatime/vim-wakatime'
 Plug 'chemzqm/wxapp.vim' " 微信小程序补全插件
@@ -584,64 +584,64 @@ let g:jsx_ext_required = 0
 "------------------------------------------------------------------------------
 " Java complete2
 "------------------------------------------------------------------------------
-autocmd FileType java setlocal omnifunc=javacomplete#Complete " 严重影响java文件打开速度
+"autocmd FileType java setlocal omnifunc=javacomplete#Complete " 严重影响java文件打开速度
 
-" 设置classpath, javacomplete插件需要
-let g:syntastic_java_javac_classpath='./bin/:/usr/local/java/lib/tools.jar:/usr/local/java/lib/dt.jar:/usr/local/java/lib/'
-let g:JavaComplete_LibsPath='./bin/'
-let g:JavaComplete_ImportOrder = ['java.', 'javax.', 'com.', 'org.', 'net.']
-let g:JavaComplete_RegularClasses = ['java.lang.String', 'java.lang.Object', 'java.util.ArrayList']
+"" 设置classpath, javacomplete插件需要
+"let g:syntastic_java_javac_classpath='./bin/:/usr/local/java/lib/tools.jar:/usr/local/java/lib/dt.jar:/usr/local/java/lib/'
+"let g:JavaComplete_LibsPath='./bin/'
+"let g:JavaComplete_ImportOrder = ['java.', 'javax.', 'com.', 'org.', 'net.']
+"let g:JavaComplete_RegularClasses = ['java.lang.String', 'java.lang.Object', 'java.util.ArrayList']
 
-"====begin(Java Keymap)===="
+""====begin(Java Keymap)===="
 
-nmap <leader>xI <Plug>(JavaComplete-Imports-AddMissing)
-" 添加缺少的包
-nmap <leader>xR <Plug>(JavaComplete-Imports-RemoveUnused)
-" 移除未用到的包
-nmap <leader>xi <Plug>(JavaComplete-Imports-AddSmart)
-" 未知
-nmap <leader>xai <Plug>(JavaComplete-Imports-Add)
-" 未知
-imap <C-x>I <Plug>(JavaComplete-Imports-AddMissing)
-" 添加缺少的包
-imap <C-x>R <Plug>(JavaComplete-Imports-RemoveUnused)
-" 移除未用到的包
-imap <C-x>i <Plug>(JavaComplete-Imports-AddSmart)
-" 未知
-imap <C-x>ai <Plug>(JavaComplete-Imports-Add)
-" 未知
-nmap <leader>xM <Plug>(JavaComplete-Generate-AbstractMethods)
-" 实现基类的抽象方法
-imap <C-x>xM <Plug>(JavaComplete-Generate-AbstractMethods)
-" 实现基类的抽象方法
-nmap <leader>xA <Plug>(JavaComplete-Generate-Accessors)
-" 生成访问器代码
-nmap <leader>xs <Plug>(JavaComplete-Generate-AccessorSetter)
-" 生成写访问器代码
-nmap <leader>xg <Plug>(JavaComplete-Generate-AccessorGetter)
-" 生成读访问器代码
-nmap <leader>xa <Plug>(JavaComplete-Generate-AccessorSetterGetter)
-" 生成读写访问器代码
-nmap <leader>xts <Plug>(JavaComplete-Generate-ToString)
-" 生成toString()方法代码
-nmap <leader>xeq <Plug>(JavaComplete-Generate-EqualsAndHashCode)
-" 生成Equals()和HashCode()方法代码
-nmap <leader>xc <Plug>(JavaComplete-Generate-Constructor)
-" 生成构造函数代码
-nmap <leader>xcc <Plug>(JavaComplete-Generate-DefaultConstructor)
-" 生成默认构造函数代码
-imap <C-x>s <Plug>(JavaComplete-Generate-AccessorSetter)
-" 生成写访问器代码
-imap <C-x>g <Plug>(JavaComplete-Generate-AccessorGetter)
-" 生成读访问器代码
-imap <C-x>a <Plug>(JavaComplete-Generate-AccessorSetterGetter)
-" 生成读写访问器代码
-vmap <leader>xs <Plug>(JavaComplete-Generate-AccessorSetter)
-" 生成写访问器代码
-vmap <leader>xg <Plug>(JavaComplete-Generate-AccessorGetter)
-" 生成读访问器代码
-vmap <leader>xa <Plug>(JavaComplete-Generate-AccessorSetterGetter)
-" 生成读写访问器代码
+"nmap <leader>xI <Plug>(JavaComplete-Imports-AddMissing)
+"" 添加缺少的包
+"nmap <leader>xR <Plug>(JavaComplete-Imports-RemoveUnused)
+"" 移除未用到的包
+"nmap <leader>xi <Plug>(JavaComplete-Imports-AddSmart)
+"" 未知
+"nmap <leader>xai <Plug>(JavaComplete-Imports-Add)
+"" 未知
+"imap <C-x>I <Plug>(JavaComplete-Imports-AddMissing)
+"" 添加缺少的包
+"imap <C-x>R <Plug>(JavaComplete-Imports-RemoveUnused)
+"" 移除未用到的包
+"imap <C-x>i <Plug>(JavaComplete-Imports-AddSmart)
+"" 未知
+"imap <C-x>ai <Plug>(JavaComplete-Imports-Add)
+"" 未知
+"nmap <leader>xM <Plug>(JavaComplete-Generate-AbstractMethods)
+"" 实现基类的抽象方法
+"imap <C-x>xM <Plug>(JavaComplete-Generate-AbstractMethods)
+"" 实现基类的抽象方法
+"nmap <leader>xA <Plug>(JavaComplete-Generate-Accessors)
+"" 生成访问器代码
+"nmap <leader>xs <Plug>(JavaComplete-Generate-AccessorSetter)
+"" 生成写访问器代码
+"nmap <leader>xg <Plug>(JavaComplete-Generate-AccessorGetter)
+"" 生成读访问器代码
+"nmap <leader>xa <Plug>(JavaComplete-Generate-AccessorSetterGetter)
+"" 生成读写访问器代码
+"nmap <leader>xts <Plug>(JavaComplete-Generate-ToString)
+"" 生成toString()方法代码
+"nmap <leader>xeq <Plug>(JavaComplete-Generate-EqualsAndHashCode)
+"" 生成Equals()和HashCode()方法代码
+"nmap <leader>xc <Plug>(JavaComplete-Generate-Constructor)
+"" 生成构造函数代码
+"nmap <leader>xcc <Plug>(JavaComplete-Generate-DefaultConstructor)
+"" 生成默认构造函数代码
+"imap <C-x>s <Plug>(JavaComplete-Generate-AccessorSetter)
+"" 生成写访问器代码
+"imap <C-x>g <Plug>(JavaComplete-Generate-AccessorGetter)
+"" 生成读访问器代码
+"imap <C-x>a <Plug>(JavaComplete-Generate-AccessorSetterGetter)
+"" 生成读写访问器代码
+"vmap <leader>xs <Plug>(JavaComplete-Generate-AccessorSetter)
+"" 生成写访问器代码
+"vmap <leader>xg <Plug>(JavaComplete-Generate-AccessorGetter)
+"" 生成读访问器代码
+"vmap <leader>xa <Plug>(JavaComplete-Generate-AccessorSetterGetter)
+"" 生成读写访问器代码
 "====end(Java Keymap)===="
 
 "======代码缩进======="
