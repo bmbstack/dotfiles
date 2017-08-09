@@ -107,10 +107,6 @@ export JAVA_HOME="/usr/local/java"
 export CLASSPATH="$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib"
 export PATH="$PATH:$JAVA_HOME/bin"
 
-# Play framework
-export PLAY1_HOME="/usr/local/play1"
-export PATH="$PATH:$PLAY1_HOME"
-
 # Android
 export ANDROID_HOME="/usr/local/android"
 export PATH="$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools"
