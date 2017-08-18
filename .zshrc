@@ -23,21 +23,6 @@ promptinit
 ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
-source ~/.zplug/init.zsh
-zplug "~/.zsh", from:local
-zplug "paoloantinori/hhighlighter", use:h.sh
-zplug "b4b4r07/enhancd", use:init.sh
-zplug "zsh-users/zsh-history-substring-search"
-zplug "Jxck/dotfiles"
-
-#zplug load --verbose
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
-
 [[ -s "$HOME/.qfc/bin/qfc.sh"  ]] && source "$HOME/.qfc/bin/qfc.sh"
 
 # disable CTRL+S from sending XOFF
