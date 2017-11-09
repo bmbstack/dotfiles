@@ -24,21 +24,6 @@ promptinit
 ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
-source ~/.zplug/init.zsh
-zplug "~/.zsh", from:local
-zplug "paoloantinori/hhighlighter", use:h.sh
-zplug "b4b4r07/enhancd", use:init.sh
-zplug "zsh-users/zsh-history-substring-search"
-zplug "Jxck/dotfiles"
-
-#zplug load --verbose
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
-
 [[ -s "$HOME/.qfc/bin/qfc.sh"  ]] && source "$HOME/.qfc/bin/qfc.sh"
 
 # disable CTRL+S from sending XOFF
@@ -108,10 +93,6 @@ export JAVA_HOME="/usr/local/java"
 export CLASSPATH="$CLASSPATH:$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib"
 export PATH="$PATH:$JAVA_HOME/bin"
 
-# Play framework
-export PLAY1_HOME="/usr/local/play1"
-export PATH="$PATH:$PLAY1_HOME"
-
 # Android
 export ANDROID_HOME="/usr/local/android"
 export PATH="$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools"
@@ -126,10 +107,10 @@ export PATH="$PATH:$GOPATH/bin:$GOROOT/bin"
 # APACHE NGINX PHP MYSQL
 export PSYSH_HOME="$HOME/.composer/vendor/psy/psysh"
 export APACHE_HOME="/usr/local/apache"
-export NGNIX_HOME="/usr/local/nginx"
+export NGNIX_HOME="/usr/local/openresty"
 export PHP_HOME="/usr/local/php"
 export MYSQL_HOME="/usr/local/mysql"
-export PATH="$PATH:/root/.node/bin:$JAVA_HOME/bin:$APACHE_HOME/bin:$NGNIX_HOME/sbin:$PHP_HOME/bin:$MYSQL_HOME/bin:$PSYSH_HOME/bin"
+export PATH="$PATH:/root/.node/bin:$JAVA_HOME/bin:$APACHE_HOME/bin:$NGNIX_HOME/bin:$NGNIX_HOME/nginx/sbin:$PHP_HOME/bin:$MYSQL_HOME/bin:$PSYSH_HOME/bin"
 
 #proxy
 export http_proxy="http://127.0.0.1:8123/"
