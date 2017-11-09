@@ -131,6 +131,7 @@ export NO_PROXY="localhost,127.0.0.1,localaddress,.localdomain.com"
 #polipo socksParentProxy=127.0.0.1:1080&
 # ubuntu server上要先使用shadowsocks.json配置文件启动shadowsocks
 # sudo sslocal -c shawdowsocks.json -d start
+# service polipo start
 #==============================Proxy end=====================================
 ENHANCD_FILTER=fzf
 export ENHANCD_FILTER
