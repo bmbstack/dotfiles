@@ -178,6 +178,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  } "FZF文件搜
 "Plug 'wakatime/vim-wakatime'
 Plug 'chemzqm/wxapp.vim' " 微信小程序补全插件
 Plug 'chemzqm/unite-js-func'  " 文件内函数跳转
+Plug 'toyamarinyon/vim-swift'
 
 call plug#end()
 

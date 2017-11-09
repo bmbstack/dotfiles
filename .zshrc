@@ -2,6 +2,7 @@
 . ~/.oh-my-zsh/templates/zshrc.zsh-template
 
 ZSH_THEME="maran"
+#ZSH_THEME="muse"
 DISABLE_CORRECTION="true"
 DISABLE_AUTO_TITLE="true"
 DISABLE_AUTO_UPDATE="true"
@@ -89,7 +90,7 @@ export PATH="$PATH:$BREW_HOME/bin"
 
 # Java 
 export JAVA_HOME="/usr/local/java"
-export CLASSPATH="$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib"
+export CLASSPATH="$CLASSPATH:$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib"
 export PATH="$PATH:$JAVA_HOME/bin"
 
 # Android
@@ -114,6 +115,17 @@ export NGNIX_HOME="/usr/local/openresty"
 export PHP_HOME="/usr/local/php"
 export MYSQL_HOME="/usr/local/mysql"
 export PATH="$PATH:/root/.node/bin:$JAVA_HOME/bin:$APACHE_HOME/bin:$NGNIX_HOME/bin:$NGNIX_HOME/nginx/sbin:$PHP_HOME/bin:$MYSQL_HOME/bin:$PSYSH_HOME/bin"
+
+#proxy
+export http_proxy="http://127.0.0.1:8123/"
+export https_proxy="http://127.0.0.1:8123/"
+export ftp_proxy="http://127.0.0.1:8123/"
+export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
+export HTTP_PROXY="http://127.0.0.1:8123/"
+export HTTPS_PROXY="http://127.0.0.1:8123/"
+export FTP_PROXY="http://127.0.0.1:8123/"
+export NO_PROXY="localhost,127.0.0.1,localaddress,.localdomain.com"
+#polipo socksParentProxy=127.0.0.1:1080
 
 # Lantern
 #export http_proxy=http://127.0.0.1:52442
