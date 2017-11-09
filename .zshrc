@@ -103,6 +103,10 @@ export GOBIN="$HOME/go/bin"
 export GO15VENDOREXPERIMENT=1
 export PATH="$PATH:$GOPATH/bin:$GOROOT/bin"
 
+# NodeJS
+export NODE="/usr/local/node"
+export PATH="$PATH:$NODE/bin"
+
 # APACHE NGINX PHP MYSQL
 export PSYSH_HOME="$HOME/.composer/vendor/psy/psysh"
 export APACHE_HOME="/usr/local/apache"
