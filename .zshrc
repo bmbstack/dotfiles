@@ -116,7 +116,7 @@ export PHP_HOME="/usr/local/php"
 export MYSQL_HOME="/usr/local/mysql"
 export PATH="$PATH:/root/.node/bin:$JAVA_HOME/bin:$APACHE_HOME/bin:$NGNIX_HOME/bin:$NGNIX_HOME/nginx/sbin:$PHP_HOME/bin:$MYSQL_HOME/bin:$PSYSH_HOME/bin"
 
-#proxy
+#=================================Proxy==========================================
 export http_proxy="http://127.0.0.1:8123/"
 export https_proxy="http://127.0.0.1:8123/"
 export ftp_proxy="http://127.0.0.1:8123/"
@@ -125,15 +125,13 @@ export HTTP_PROXY="http://127.0.0.1:8123/"
 export HTTPS_PROXY="http://127.0.0.1:8123/"
 export FTP_PROXY="http://127.0.0.1:8123/"
 export NO_PROXY="localhost,127.0.0.1,localaddress,.localdomain.com"
-#polipo socksParentProxy=127.0.0.1:1080
 
-# Lantern
-#export http_proxy=http://127.0.0.1:52442
-#export https_proxy=$http_proxy
-#export ftp_proxy=$http_proxy
-#export rsync_proxy=$http_proxy
-#export no_proxy="localhost,127.0.0.1,.dade.com"
-
+#==============================Proxy使用说明=====================================
+# mac下执行下面这一句
+#polipo socksParentProxy=127.0.0.1:1080&
+# ubuntu server上要先使用shadowsocks.json配置文件启动shadowsocks
+# sudo sslocal -c shawdowsocks.json -d start
+#==============================Proxy end=====================================
 ENHANCD_FILTER=fzf
 export ENHANCD_FILTER
 
