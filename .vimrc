@@ -175,9 +175,10 @@ Plug 'mhinz/vim-startify'
 Plug 'hoaproject/Contributions-Vim-Pp'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  } "FZF文件搜索
-Plug 'wakatime/vim-wakatime'
+"Plug 'wakatime/vim-wakatime'
 Plug 'chemzqm/wxapp.vim' " 微信小程序补全插件
 Plug 'chemzqm/unite-js-func'  " 文件内函数跳转
+Plug 'toyamarinyon/vim-swift'
 
 call plug#end()
 
