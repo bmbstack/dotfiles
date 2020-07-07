@@ -4,8 +4,7 @@
 " AwesomeLink: https://github.com/yangyangwithgnu/use_vim_as_ide
 " PluginList: http://www.vimawesome.com
 " Author: bmbstack 
-" Email: wangmingjob@icloud.com
-" Version: 0.0.1
+" Email: wangmingjob@icloud.com " Version: 0.0.1
 " WebSite: http://www.bmbstack.com
 " Last Mofify: 2016年07月30日
 " Desc: a simple vim config for server
@@ -111,7 +110,7 @@ filetype off                  " required
 call plug#begin('~/.vim/plugged')
 
 Plug 'gmarik/Vundle.vim' "插件管理器
-" Plug 'tomasr/molokai' "molokai主题
+Plug 'tomasr/molokai' "molokai主题
 Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'haya14busa/incsearch.vim' "iMproved searching for vim
 Plug 'scrooloose/nerdtree' "树形目录
@@ -129,11 +128,8 @@ Plug 'xolox/vim-easytags' "tags生成器,避免使用ctags
 Plug 'majutsushi/tagbar' "显示tagbar目录
 Plug 'pangloss/vim-javascript' "js缩进语法支持
 Plug 'mxw/vim-jsx' " jsx 语法高亮
-" ES2015 code snippets (Optional)
 Plug 'epilande/vim-es2015-snippets'
-" React code snippets
 Plug 'epilande/vim-react-snippets'
-" Trigger configuration (Optional)  let g:UltiSnipsExpandTrigger="<C-l>"
 Plug 'SirVer/ultisnips'  
 Plug 'posva/vim-vue' " Vim syntax highlighting for Vue components
 Plug 'isRuslan/vim-es6' " ECMAScript 6语法高亮
@@ -169,13 +165,11 @@ Plug 'stanangeloff/php.vim'
 Plug 'rking/ag.vim' "超级ag搜索
 Plug 'JulesWang/css.vim'
 Plug 'cakebaker/scss-syntax.vim'"
-Plug 'ashisha/image.vim'
 Plug 'Konfekt/FastFold'
 Plug 'mhinz/vim-startify'
 Plug 'hoaproject/Contributions-Vim-Pp'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  } "FZF文件搜索
-"Plug 'wakatime/vim-wakatime'
 Plug 'chemzqm/wxapp.vim' " 微信小程序补全插件
 Plug 'chemzqm/unite-js-func'  " 文件内函数跳转
 Plug 'toyamarinyon/vim-swift'

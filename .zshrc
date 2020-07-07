@@ -138,6 +138,6 @@ ENHANCD_FILTER=fzf
 export ENHANCD_FILTER
 
 #==================================================PATH end============================================================================
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.zsh/aliases.zsh ] && source ~/.zsh/aliases.zsh
+export PATH="/usr/local/opt/python@3.8/bin:$PATH"
