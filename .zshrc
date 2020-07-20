@@ -7,7 +7,7 @@ DISABLE_CORRECTION="true"
 DISABLE_AUTO_TITLE="true"
 DISABLE_AUTO_UPDATE="true"
 
-plugins=(git svn python colored-man tmux git-flow)
+plugins=(git svn python tmux git-flow)
 
 WORK_DIR="$HOME/.dotfiles/"
 PRE_CUSTOM="${WORK_DIR}/custom/pre_custom.zsh"
